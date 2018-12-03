@@ -10,7 +10,9 @@
 		<div class="row">
 			<div class="col-lg-8 col-md-12">
 				<div class="more-news block color-default">
-					<h3 class="block-title"><span><?php echo pll__('Radioactive') ?></span></h3>
+					<h3 class="block-title">
+						<!-- <span><?php echo pll__('Radioactive') ?></span> -->
+					</h3>
 
 					<div id="more-news-slide" class="owl-carousel owl-theme more-news-slide">
 						<?php $arg = ['post_type' => 'radioactive', 'orderby' => 'post_id', 'posts_per_page'=>8, 'order' => 'DESC']; ?>
@@ -51,7 +53,7 @@
 
 						<?php $count_nuclear++ ?>
 						<?php endwhile; ?>
-						
+
 						<?php if ( $count_nuclear % 2 != 0 ) : ?>
 							</div>
 						<?php endif ?>

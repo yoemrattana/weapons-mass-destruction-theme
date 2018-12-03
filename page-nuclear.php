@@ -10,7 +10,9 @@
 		<div class="row">
 			<div class="col-lg-8 col-md-12">
 				<div class="more-news block color-default">
-					<h3 class="block-title"><span><?php echo pll__('Nuclear Weapons') ?></span></h3>
+					<h3 class="block-title">
+						<!-- <span><?php echo pll__('Nuclear Weapons') ?></span> -->
+					</h3>
 
 					<div id="more-news-slide" class="owl-carousel owl-theme more-news-slide">
 						<?php $arg = ['post_type' => 'nuclear_weapons', 'orderby' => 'post_id', 'posts_per_page'=>8, 'order' => 'DESC']; ?>
