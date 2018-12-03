@@ -4,14 +4,64 @@
  * */
  get_header();
 ?>
+<div class="trending-light d-md-block d-lg-block d-none">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="trending-title"><?php echo pll__('Latest') ?></h3>
+				<?php $arg = ['post_type' => 'nuclear_weapons', 'orderby' => 'post_id', 'posts_per_page'=>16, 'order' => 'DESC']; ?>
+            	<?php $nuclear_weapons = new WP_Query($arg) ?>
+				<div id="trending-slide" class="owl-carousel owl-theme trending-slide">
+					<?php while ( $nuclear_weapons->have_posts() ) : $nuclear_weapons->the_post(); ?>
+						<div class="item">
+						   <div class="post-content">
+						      <h2 class="post-title title-small">
+						         <a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+						      </h2>
+						   </div><!-- Post content end -->
+						</div><!-- Item 1 end -->
+					<?php endwhile ?>					
+				</div><!-- Carousel end -->
+			</div><!-- Col end -->
+		</div><!--/ Row end -->
+	</div><!--/ Container end -->
+</div><!--/ Trending end -->
 
-<section class="block-wrapper">
+<section class="featured-post-area no-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 pad-r">
+				<div id="featured-slider" class="owl-carousel owl-theme featured-slider">
+					<?php $arg = ['post_type' => 'radioactive', 'orderby' => 'post_id', 'posts_per_page'=>16, 'order' => 'DESC']; ?>
+            		<?php $radioactives = new WP_Query($arg) ?>
+            		<?php while ( $radioactives->have_posts() ) : $radioactives->the_post(); ?>
+						<div class="item" style="background-image:url(<?php echo  get_field('image')['url']?>)">
+							<div class="featured-post">
+						 		<div class="post-content">
+						 			<!-- <a class="post-cat" href="#">Health</a> -->
+						 			<h2 class="post-title title-extra-large">
+						 				<a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+						 			</h2>
+						 			<!-- <span class="post-date">March 16, 2017</span> -->
+						 		</div>
+						 	</div><!--/ Featured post end -->
+						</div><!-- Item 1 end -->
+					<?php endwhile ?>
+				</div><!-- Featured owl carousel end-->
+			</div><!-- Col 6 end -->
+
+		</div><!-- Row end -->
+	</div><!-- Container end -->
+</section><!-- Trending post end -->
+
+
+<section class="block-wrapper ">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
-				<?php $arg = ['post_type' => 'nuclear_weapons', 'orderby' => 'post_id', 'posts_per_page'=>16, 'order' => 'DESC']; ?>
-            	<?php $nuclear_weapons = new WP_Query($arg) ?>
-				<div class="latest-news block color-red">
+				<!-- <?php $arg = ['post_type' => 'nuclear_weapons', 'orderby' => 'post_id', 'posts_per_page'=>16, 'order' => 'DESC']; ?>
+            	<?php $nuclear_weapons = new WP_Query($arg) ?> -->
+				<div class="latest-news block color-blue">
 					<h3 class="block-title"><span><?php echo pll__('Nuclear Weapons') ?></span></h3>
 					<div id="latest-news-slide" class="owl-carousel owl-theme latest-news-slide">
 						<?php $count_nuclear = 0 ?>
