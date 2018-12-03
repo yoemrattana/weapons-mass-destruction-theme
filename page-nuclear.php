@@ -51,7 +51,9 @@
 
 						<?php $count_nuclear++ ?>
 						<?php endwhile; ?>
-
+						<?php if ($count_nuclear % 2 !== 0) : ?>
+							</div>
+						<?php endif ?>
 					</div><!-- More news carousel end -->
 				</div><!--More news block end -->
 			</div><!-- Content Col end -->
