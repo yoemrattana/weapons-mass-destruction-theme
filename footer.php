@@ -10,9 +10,9 @@
 						<div class="footer-logo">
 							<img class="img-fluid" src="<?php bloginfo('stylesheet_directory');?>/assets/images/logos/logo.png" alt="logo"  />
 						</div>
-						<p>News247 Worldwide is a popular online newsportal and going source for technical and digital content for its influential audience around the globe. You can reach us via email or phone.</p>
-						<p class="footer-info-phone"><i class="fa fa-phone"></i> +(785) 238-4131</p>
-						<p class="footer-info-email"><i class="fa fa-envelope-o"></i> editor@news247.com</p>
+						<p>អាជ្ញាធរជាតិអាវុធគីមី</p>
+						<p class="footer-info-phone"><i class="fa fa-phone"></i> 088 998 9899</p>
+						<p class="footer-info-email"><i class="fa fa-envelope-o"></i> yoemrattana@gmail.com</p>
 						<ul class="unstyled footer-social">
 							<li>
 								<a title="Rss" href="#">
