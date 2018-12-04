@@ -1203,7 +1203,7 @@ span.post-comment span {
 
 .header {
    padding: 25px 0;
-   background: #fff url('https://front.un-arm.org/img/headerbk.png') 19% 0% no-repeat;
+   background: #fff url(../images/bg.png) 19% 0% no-repeat;
 }
 
 .navbar-fixed {
@@ -1223,9 +1223,9 @@ span.post-comment span {
 
 /*-- Logo --*/
 
-.logo {
+/*.logo {
    padding: 28px 0;
-}
+}*/
 
 /* header right */
 
