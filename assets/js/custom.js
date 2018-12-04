@@ -94,7 +94,7 @@ jQuery(function($) {
 
 			loop:true,
 			animateOut: 'fadeOut',
-			autoplay:false,
+			autoplay:true,
 			autoplayHoverPause:true,
 			nav:true,
 			margin:0,
