@@ -2305,7 +2305,7 @@ ul.navbar-nav>li.mega-dropdown {
 
 .footer-info-content {
    /*border-top: 1px solid #606060;*/
-   margin-top: 50px;
+   /*margin-top: 50px;*/
    padding: 50px 250px 0;
 }
 
@@ -2316,7 +2316,7 @@ ul.navbar-nav>li.mega-dropdown {
 
 .footer-logo img {
    display: inline-block;
-   margin-bottom: 30px;
+   /*margin-bottom: 30px;*/
 }
 
 .footer-info-phone,
@@ -3020,4 +3020,11 @@ label {
    margin: 40px auto;
    overflow-x: hidden;
    box-shadow: 0 7px 13px rgba(0, 0, 0, 0.15);
+}
+
+/**/
+@media (max-width: 1023px) {
+   .right-slide-obj {
+      display: none;
+   }
 }

@@ -33,7 +33,7 @@
 
 			</div><!-- Col 7 end -->
 
-			<div class="col-lg-5 col-md-12 pad-l">
+			<div class="col-lg-5 col-md-12 pad-l right-slide-obj">
 				<div class="row">
 					<?php $arg = ['post_type' => ['nuclear_weapons', 'radioactive'], 'orderby' => 'rand', 'posts_per_page'=>3]; ?>
             		<?php $radioactives = new WP_Query($arg) ?>
@@ -96,8 +96,9 @@
 	</div><!-- Container end -->
 </section><!-- Trending post end -->
 
+<div class="gap-20"></div>
 
-<section class="block-wrapper ">
+<section class="block-wrapper no-padding">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
@@ -145,11 +146,9 @@
 					</div><!-- Latest News owl carousel end-->
 				</div><!--- Latest news end -->
 
-				<div class="gap-50"></div>
+				<div class="gap-20"></div>
 
-				<div class="gap-40"></div>
-
-				<div class="block color-orange">
+				<div class="block color-orange no-padding">
 					<h3 class="block-title"><span><?php echo pll__("Radioactive") ?></span></h3>
 
 					<div id="latest-news-slide" class="owl-carousel owl-theme latest-news-slide">
@@ -202,6 +201,7 @@
 	</div><!-- Container end -->
 </section><!-- First block end -->
 
+<div class="gap-20"></div>
 
 <?php
   get_footer();
