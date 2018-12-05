@@ -4,24 +4,25 @@
  * */
  get_header();
 ?>
-
-<section class="block-wrapper p-bottom-0">
+<div class="gap-20"></div>
+<section class="block-wrapper p-bottom-0 no-padding">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-12">
 				<div class="more-news block color-default">
-					<h3 class="block-title">
-						<!-- <span><?php echo pll__('Nuclear Weapons') ?></span> -->
+					<!-- <h3 class="block-title">
+						<span><?php echo pll__('Nuclear Weapons') ?></span>
 					</h3>
-
-					<div id="more-news-slide" class="owl-carousel owl-theme more-news-slide">
-						<?php $arg = ['post_type' => 'nuclear_weapons', 'orderby' => 'post_id', 'posts_per_page'=>8, 'order' => 'DESC']; ?>
+ -->
+					<div id="more-news-slide" class="owl-carousel1 owl-theme1 more-news-slide1">
+						<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
+						<?php $arg = ['post_type' => 'nuclear_weapons', 'orderby' => 'post_id', 'posts_per_page'=>8, 'order' => 'DESC', 'paged' => $paged ]; ?>
             			<?php $nuclear_weapons = new WP_Query($arg) ?>
             			<?php $count_nuclear = 0 ?>
 						<?php while ( $nuclear_weapons->have_posts() ) : $nuclear_weapons->the_post(); ?>
-						<?php if ( $count_nuclear % 2 == 0 ) : ?>	
+							
 							<div class="item">
-						<?php endif; ?>		
+							
 								<div class="post-block-style post-float-half clearfix">
 									<div class="post-thumb">
 										<a href="<?php the_permalink(); ?>">
@@ -42,22 +43,18 @@
 						 			</div><!-- Post content end -->
 								</div><!-- Post Block style 1 end -->
 
-								
-								<div class="gap-30"></div>
-								
+								<div class="gap-20"></div>
 
-								
-							<?php if ( $count_nuclear % 2 != 0 ) : ?>
 							</div>
-							<?php endif ?>
-
+							
 						<?php $count_nuclear++ ?>
 						<?php endwhile; ?>
-						<?php if ($count_nuclear % 2 !== 0) : ?>
-							</div>
-						<?php endif ?>
+						
 					</div><!-- More news carousel end -->
 				</div><!--More news block end -->
+			
+				<?php echo bootstrap_pagination($nuclear_weapons); ?>
+				
 			</div><!-- Content Col end -->
 
 			<div class="col-lg-4 col-sm-12">
@@ -98,6 +95,7 @@
 	</div><!-- Container end -->
 </section><!-- 3rd block end -->
 
+<div class="gap-30"></div>
 
 <?php
   get_footer();

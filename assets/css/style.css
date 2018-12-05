@@ -3028,3 +3028,7 @@ label {
       display: none;
    }
 }
+
+.pagination a.page-link {
+   margin-right: 0;
+}
