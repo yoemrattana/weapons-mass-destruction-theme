@@ -16,7 +16,7 @@
  -->
 					<div id="more-news-slide" class="owl-carousel1 owl-theme1 more-news-slide1">
 						<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
-						<?php $arg = ['post_type' => 'nuclear_weapons', 'orderby' => 'post_id', 'posts_per_page'=>8, 'order' => 'DESC', 'paged' => $paged ]; ?>
+						<?php $arg = ['post_type' => 'nuclear_weapons', 'orderby' => 'post_id', 'posts_per_page'=>2, 'order' => 'DESC', 'paged' => $paged ]; ?>
             			<?php $nuclear_weapons = new WP_Query($arg) ?>
             			<?php $count_nuclear = 0 ?>
 						<?php while ( $nuclear_weapons->have_posts() ) : $nuclear_weapons->the_post(); ?>

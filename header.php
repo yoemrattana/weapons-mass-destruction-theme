@@ -139,8 +139,8 @@
 								<li <?php echo is_page( 'nuclear-weapons' ) || is_page( 'nuclear-weapons-en' ) ? 'class="active"' : ''?>>
 									<a href="<?php echo home_url( '/nuclear-weapons' ) ?>"><?php echo pll__("Nuclear Weapons") ?></a>
 								</li>
-								<li <?php echo is_page( 'radioactive' ) || is_page( 'radioactive-en' ) ? 'class="active"' : ''?>>
-									<a href="<?php echo home_url( '/radioactive' ) ?>"><?php echo pll__("Radioactive") ?></a>
+								<li <?php echo is_page( 'radioactives' ) || is_page( 'radioactive-en' ) ? 'class="active"' : ''?>>
+									<a href="<?php echo home_url( '/radioactives' ) ?>"><?php echo pll__("Radioactive") ?></a>
 								</li>
 								
 								<!-- <li class="nav-item dropdown active">

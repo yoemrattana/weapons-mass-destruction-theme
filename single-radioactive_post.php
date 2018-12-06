@@ -59,7 +59,7 @@ get_header();
 						<h3 class="block-title"><span><?php echo pll__('Latest') ?></span></h3>
 						<div class="list-post-block">
 							<ul class="list-post review-post-list">
-								<?php $arg = ['post_type' => 'radioactive', 'orderby' => 'post_id', 'posts_per_page'=>8, 'order' => 'DESC']; ?>
+								<?php $arg = ['post_type' => 'radioactive_post', 'orderby' => 'post_id', 'posts_per_page'=>8, 'order' => 'DESC']; ?>
             					<?php $radioactive = new WP_Query($arg) ?>
 								<?php while ( $radioactive->have_posts() ) : $radioactive->the_post(); ?>
 								<li class="clearfix">

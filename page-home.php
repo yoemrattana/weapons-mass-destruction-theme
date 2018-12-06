@@ -152,7 +152,7 @@
 					<h3 class="block-title"><span><?php echo pll__("Radioactive") ?></span></h3>
 
 					<div id="latest-news-slide" class="owl-carousel owl-theme latest-news-slide">
-						<?php $arg = ['post_type' => 'radioactive', 'orderby' => 'post_id', 'posts_per_page'=>16, 'order' => 'DESC']; ?>
+						<?php $arg = ['post_type' => 'radioactive_post', 'orderby' => 'post_id', 'posts_per_page'=>16, 'order' => 'DESC']; ?>
             			<?php $radioactives = new WP_Query($arg) ?>
 						<?php $count = 0 ?>
 						<?php while ( $radioactives->have_posts() ) : $radioactives->the_post(); ?>
