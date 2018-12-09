@@ -89,7 +89,39 @@
 <!-- Template custom -->
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/assets/js/custom.js"></script>
 
+<script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/js/unitegallery.min.js'></script>	
+<?php if ( is_page( 'home' ) ) : ?>
+<script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/themes/default/ug-theme-default.js'></script>
+<?php endif ?>
+<script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+
 <?php wp_footer(); ?>
 </div> <!-- end inner-body-->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<script type="text/javascript">
+
+	jQuery(document).ready(function(){
+
+		jQuery("#gallery-photo").unitegallery({
+				tiles_type:"justified"
+		});
+		jQuery("#gallery-video").unitegallery();
+
+
+	});
+
+</script>
+
 </body>
 </html>

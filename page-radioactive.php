@@ -15,14 +15,19 @@
 					</h3> -->
 
 					<div id="more-news-slide" class="owl-carousel1 owl-theme1 more-news-slide1">
-						<?php $paged2 = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
-						<?php $arg = ['post_type' => 'radioactive_post', 'orderby' => 'post_id', 'posts_per_page'=>8, 'order' => 'DESC', 'paged' => $paged2]; ?>
+						<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
+						<?php $arg = [
+							'post_type' 	=> 'radioactive_post', 
+							'orderby' 		=> 'post_id', 
+							'posts_per_page'=> 8, 
+							'order' 		=> 'DESC', 
+							'paged' 		=> $paged]; 
+						?>
             			<?php $radioactive = new WP_Query($arg) ?>
             			
 						<?php while ( $radioactive->have_posts() ) : $radioactive->the_post(); ?>
 							
 							<div class="item">
-						
 								<div class="post-block-style post-float-half clearfix">
 									<div class="post-thumb">
 										<a href="<?php the_permalink(); ?>">
@@ -42,15 +47,10 @@
 							 			<p><?php the_excerpt() ?></p>
 						 			</div><!-- Post content end -->
 								</div><!-- Post Block style 1 end -->
-	
-								<div class="gap-30"></div>
-											
+								<div class="gap-30"></div>				
 							</div>
 
 						<?php endwhile; ?>
-
-						
-
 					</div><!-- More news carousel end -->
 				</div><!--More news block end -->
 				<?php echo bootstrap_pagination($radioactive); ?>
@@ -58,7 +58,6 @@
 
 			<div class="col-lg-4 col-sm-12">
 				<div class="sidebar sidebar-right">
-
 					<div class="widget color-default">
 						<h3 class="block-title"><span><?php echo pll__('Latest') ?></span></h3>
 						<div class="list-post-block">
@@ -85,11 +84,8 @@
 							</ul><!-- List post end -->
 						</div><!-- List post block end -->
 					</div><!-- Latest Review Widget end -->
-
-					
 				</div><!--Sidebar right end -->
 			</div><!-- Sidebar col end -->
-
 		</div><!-- Row end -->
 	</div><!-- Container end -->
 </section><!-- 3rd block end -->

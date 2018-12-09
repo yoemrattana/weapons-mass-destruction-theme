@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<section class="block-wrapper">
+	<section class="block-wrapper no-padding">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-12">

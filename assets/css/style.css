@@ -1273,7 +1273,8 @@ ul.top-info-box>li.nav-search i {
 }
 
 .main-nav>.container>.row {
-   border-top: 3px solid #ec0000;
+   /*border-top: 3px solid #ec0000;*/
+   border-top: 3px solid #00adef;
    border-bottom: 1px solid #dedede;
    margin-left: 0;
    margin-right: 0;
@@ -3031,4 +3032,38 @@ label {
 
 .pagination a.page-link {
    margin-right: 0;
+}
+
+.single-video {
+   margin: 6px 0 3px 0;
+}
+
+.cat-photo {
+   padding: 10px;
+}
+
+li.active-cat-photo>a{
+   color: blue;
+}
+
+.post-title-widget {
+   font-size: 12px;
+   font-weight: normal;
+   font-family: "Hanuman",  "Noto Serif";
+   /*line-height: 24px;
+   margin: 15px 0 0;*/
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }

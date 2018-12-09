@@ -37,6 +37,12 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Hanuman" rel="stylesheet">
 
+	<!-- video gallery plugin -->
+
+	<link rel='stylesheet' href='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/css/unite-gallery.css' type='text/css' />
+	
+	<link rel='stylesheet' href='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/themes/default/ug-theme-default.css' type='text/css' />
+
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -133,26 +139,66 @@
 
 						<div id="navbarSupportedContent" class="collapse navbar-collapse navbar-responsive-collapse">
 							<ul class="nav navbar-nav" style="font-family: Hanuman;">
-								<li <?php echo is_page( 'home' ) || is_page( 'home-en' ) ? 'class="active"' : ''?>>
+								<li>
 									<a class="nav-name" href="<?php echo home_url( '/' ) ?>"><?php echo pll__("Home") ?></a>
 								</li>
-								<li <?php echo is_page( 'nuclear-weapons' ) || is_page( 'nuclear-weapons-en' ) ? 'class="active"' : ''?>>
+								<!-- <li <?php echo is_page( 'nuclear-weapons' ) || is_page( 'nuclear-weapons-en' ) ? '' : ''?>>
 									<a href="<?php echo home_url( '/nuclear-weapons' ) ?>"><?php echo pll__("Nuclear Weapons") ?></a>
-								</li>
-								<li <?php echo is_page( 'radioactives' ) || is_page( 'radioactive-en' ) ? 'class="active"' : ''?>>
-									<a href="<?php echo home_url( '/radioactives' ) ?>"><?php echo pll__("Radioactive") ?></a>
-								</li>
-								
-								<!-- <li class="nav-item dropdown active">
-									<a href="#" class="nav-link" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
-									<ul class="dropdown-menu" role="menu">
-										<li class="active"><a href="index.html">Home 1</a></li>
-										<li><a href="index-2.html">Home 2</a></li>
-										<li><a href="index-3.html">Home 3</a></li>
-										<li><a href="index-4.html">Home 4</a></li>
-										<li><a href="index-5.html">Home 5</a></li>
-									</ul>
 								</li> -->
+								<!-- <li <?php echo is_page( 'radioactives' ) || is_page( 'radioactive-en' ) ? '' : ''?>>
+									<a href="<?php echo home_url( '/radioactives' ) ?>"><?php echo pll__("Radioactive") ?></a>
+								</li> -->
+								<!-- <li <?php echo is_page( 'news' ) || is_page( 'news-en' ) ? '' : ''?>>
+									<a href="<?php echo home_url( '/news' ) ?>"><?php echo pll__("News") ?></a>
+								</li> -->
+
+								<li class="nav-item dropdown">
+									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__("News") ?> <i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="<?php echo home_url( '/news' ) ?>"><?php echo pll__( 'All' ) ?></a></li>
+										<li><a href="<?php echo home_url( '/national-news' ) ?>"><?php echo pll__( 'National' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/international-news' ) ?>"><?php echo pll__( 'International' ) ?></a></li>
+									</ul>
+								</li>
+
+								<li>
+									<a href="<?php echo home_url( '/events' ) ?>"><?php echo pll__("Event") ?></a>
+								</li>
+
+								
+								<li class="nav-item dropdown">
+									<a href="#" class="nav-link" data-toggle="dropdown">Media <i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu" role="menu">
+										<li ><a href="<?php echo home_url( '/photos' ) ?>">Gallery</a></li>
+										<li ><a href="<?php echo home_url( '/videos' ) ?>">Video</a></li>
+										<li ><a href="<?php echo home_url( '/presses-release' ) ?>">Press Release</a></li>
+										<li ><a href="<?php echo home_url( '/publications' ) ?>">Publicatons</a></li>
+									</ul>
+								</li>
+
+								<li class="nav-item dropdown">
+									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'About' ) ?> <i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu" role="menu">
+										<li ><a href="<?php echo home_url( '/about' ) ?>"><?php echo pll__( 'About' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/organization' ) ?>"><?php echo pll__( 'Organization' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/structure' ) ?>"><?php echo pll__( 'Structure' ) ?></a></li>
+									</ul>
+								</li>
+
+								<li>
+									<a href="<?php echo home_url( '/mission-vision' ) ?>"><?php echo pll__("Mission/Vision") ?></a>
+								</li>
+
+
+								<li class="nav-item dropdown">
+									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'Weapon of Mass Destruction' ) ?> <i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu" role="menu">
+										<li ><a href="<?php echo home_url( '/nuclear-weapons' ) ?>"><?php echo pll__( 'Nuclear' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/missile' ) ?>"><?php echo pll__( 'Missile' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/chemical' ) ?>"><?php echo pll__( 'Chemical' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/biological' ) ?>"><?php echo pll__( 'Biological' ) ?></a></li>
+									</ul>
+								</li>
 
 								<!-- <li>
 									<a href="category-style4.html">Travel</a>
