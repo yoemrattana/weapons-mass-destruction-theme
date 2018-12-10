@@ -35,10 +35,9 @@ get_header();
 
 						<div class="post-content-area">
 							<div class="post-media post-featured-image">
-								<a href="<?php echo  get_field('image')['url']?>" class="gallery-popup"><img src="<?php echo  get_field('image')['url']?>" class="img-fluid" alt=""></a>
+								<a href="<?php echo get_field('image')['url']?>" class="gallery-popup"><img src="<?php echo get_field('image')['url']?>" class="img-fluid" alt=""></a>
 							</div>
 							<div class="entry-content">
-								
 								<?php echo get_field('description') ?>
 							</div><!-- Entery content end -->
 							
