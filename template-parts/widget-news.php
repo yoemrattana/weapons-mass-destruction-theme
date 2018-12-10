@@ -31,7 +31,7 @@ $news = new WP_Query($arg);
 						</div><!-- Post thumb end -->
 						<div class="post-content">
 				 			<h2 class="post-title">
-				 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ); ?></a>
+				 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 100, '...' ); ?></a>
 				 			</h2>								 			
 			 			</div><!-- Post content end -->
 					</div><!-- Post block style end -->
