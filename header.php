@@ -193,6 +193,7 @@
 								<li class="nav-item dropdown">
 									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'Weapon of Mass Destruction' ) ?> <i class="fa fa-angle-down"></i></a>
 									<ul class="dropdown-menu" role="menu">
+										<li ><a href="<?php echo home_url( '/weapon-of-mass-destruction' ) ?>"><?php echo pll__( 'Weapon of Mass Destruction' ) ?></a></li>
 										<li ><a href="<?php echo home_url( '/nuclear-weapons' ) ?>"><?php echo pll__( 'Nuclear' ) ?></a></li>
 										<li ><a href="<?php echo home_url( '/missile' ) ?>"><?php echo pll__( 'Missile' ) ?></a></li>
 										<li ><a href="<?php echo home_url( '/chemical' ) ?>"><?php echo pll__( 'Chemical' ) ?></a></li>

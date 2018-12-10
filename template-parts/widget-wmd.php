@@ -1,7 +1,9 @@
 <div class="card">
 	<div class="card-body">
-		<p><strong>Weapon of Mass Destruction</strong></p>
+		<!-- <p><strong>Weapon of Mass Destruction</strong></p> -->
 		<ul class="list-arrow">
+			<li <?php echo is_page( 'weapon-of-mass-destruction' ) ? 'class="active-cat-photo"' : '' ?>><a href="<?php echo site_url( '/weapon-of-mass-destruction' ) ?>"><?php echo pll__( 'Weapon of Mass Destruction' ) ?></a></li>
+
 			<li <?php echo is_page( 'nuclear-weapons' ) ? 'class="active-cat-photo"' : '' ?>><a href="<?php echo site_url( '/nuclear-weapons' ) ?>"><?php echo pll__( 'Nuclear' ) ?></a></li>
 
 			<li <?php echo is_page( 'missile' ) ? 'class="active-cat-photo"' : '' ?>><a href="<?php echo site_url( '/missile' ) ?>"><?php echo pll__( 'Missile' ) ?></a></li>
