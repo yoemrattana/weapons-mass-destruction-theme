@@ -2,7 +2,7 @@
 	<h3 class="block-title"><span><?php echo pll__('Follow Us') ?></span></h3>
 
 	<div class="fb-page" 
-		data-href="https://www.facebook.com/facebook"
+		data-href="https://web.facebook.com/NACWCambodia/"
 		data-width="380" 
 		data-hide-cover="false"
 		data-show-facepile="false">  	

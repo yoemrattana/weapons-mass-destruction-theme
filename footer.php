@@ -11,22 +11,22 @@
 							<img class="img-fluid" src="<?php bloginfo('stylesheet_directory');?>/assets/images/logos/logo.png" alt="logo"  />
 						</div>
 						<p>អាជ្ញាធរជាតិអាវុធគីមី</p>
-						<p class="footer-info-phone"><i class="fa fa-phone"></i> 088 998 9899</p>
-						<p class="footer-info-email"><i class="fa fa-envelope-o"></i> yoemrattana@gmail.com</p>
+						<p class="footer-info-phone"><i class="fa fa-phone"></i> <?php echo get_field( 'phone', 165 ) ?></p>
+						<p class="footer-info-email"><i class="fa fa-envelope-o"></i> <?php echo get_field( 'email', 165 ) ?></p>
 						<ul class="unstyled footer-social">
 							<li>
-								<a title="Rss" href="#">
+								<!-- <a title="Rss" href="#">
 									<span class="social-icon"><i class="fa fa-rss"></i></span>
-								</a>
-								<a title="Facebook" href="#">
+								</a> -->
+								<a title="Facebook" href="https://web.facebook.com/NACWCambodia/" target="_blank">
 									<span class="social-icon"><i class="fa fa-facebook"></i></span>
 								</a>
-								<a title="Twitter" href="#">
+								<!-- <a title="Twitter" href="#">
 									<span class="social-icon"><i class="fa fa-twitter"></i></span>
 								</a>
 								<a title="Google+" href="#">
 									<span class="social-icon"><i class="fa fa-google-plus"></i></span>
-								</a>
+								</a> -->
 								<!-- <a title="Linkdin" href="#">
 									<span class="social-icon"><i class="fa fa-linkedin"></i></span>
 								</a>

@@ -78,10 +78,10 @@
 				<div class="col-md-4 top-social text-lg-right text-md-center">
 					<ul class="unstyled">
 						<li>
-							<a title="Facebook" href="#">
+							<a title="Facebook" href="https://web.facebook.com/NACWCambodia/">
 								<span class="social-icon"><i class="fa fa-facebook"></i></span>
 							</a>
-							<a title="Twitter" href="#">
+							<!-- <a title="Twitter" href="#">
 								<span class="social-icon"><i class="fa fa-twitter"></i></span>
 							</a>
 							<a title="Google+" href="#">
@@ -89,13 +89,13 @@
 							</a>
 							<a title="Linkdin" href="#">
 								<span class="social-icon"><i class="fa fa-linkedin"></i></span>
-							</a>
-							<a title="Rss" href="#">
+							</a> -->
+							<!-- <a title="Rss" href="#">
 								<span class="social-icon"><i class="fa fa-rss"></i></span>
-							</a>
-							<a title="Skype" href="#">
+							</a> -->
+							<!-- <a title="Skype" href="#">
 								<span class="social-icon"><i class="fa fa-skype"></i></span>
-							</a>
+							</a> -->
 						</li>
 					</ul><!-- Ul end -->
 				</div><!--/ Top social col end -->
