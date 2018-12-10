@@ -57,7 +57,7 @@
 							<div class="col-md-12">
 								<div class="post-overaly-style contentTop hot-post-top clearfix">
 									<div class="post-thumb">
-										<a href="#"><img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" /></a>
+										<a href="<?php the_permalink(); ?>"><img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" /></a>
 									</div>
 									<div class="post-content">
 										<?php 
@@ -75,7 +75,7 @@
 							<div class="col-md-6 pad-r-small">
 								<div class="post-overaly-style contentTop hot-post-bottom clearfix">
 									<div class="post-thumb">
-										<a href="#"><img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" /></a>
+										<a href="<?php the_permalink(); ?>"><img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" /></a>
 									</div>
 									<div class="post-content">
 							 			<a class="post-cat" href="#"><?php echo pll__( $category[0]->cat_name ) ?></a>
@@ -89,7 +89,7 @@
 							<div class="col-md-6 pad-l-small">
 								<div class="post-overaly-style contentTop hot-post-bottom clearfix">
 									<div class="post-thumb">
-										<a href="#"><img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" /></a>
+										<a href="<?php the_permalink(); ?>"><img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" /></a>
 									</div>
 									<div class="post-content">
 							 			<a class="post-cat" href="#"><?php echo pll__( $category[0]->cat_name ) ?></a>
@@ -139,7 +139,7 @@
 										<!-- <a class="post-cat" href="#">Health</a> -->
 										<div class="post-content">
 								 			<h2 class="post-title title-medium">
-								 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+								 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ); ?></a>
 								 			</h2>
 								 			<div class="post-meta">
 								 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
@@ -204,7 +204,7 @@
 							<li class="clearfix">
 								<div class="post-block-style post-float clearfix">
 									<div class="post-thumb">
-										<a href="#">
+										<a href="<?php the_permalink(); ?>">
 											<img class="img-fluid" src="<?php echo get_field( 'image' )['url'] ?>" alt="" />
 										</a>
 										<a class="post-cat" href="#"><?php echo pll__( 'Press Release' ) ?></a>
@@ -242,7 +242,7 @@
 							<li class="clearfix">
 								<div class="post-block-style post-float clearfix">
 									<div class="post-thumb">
-										<a href="#">
+										<a href="<?php the_permalink(); ?>">
 											<img class="img-fluid" src="<?php echo get_field( 'image' )['url'] ?>" alt="" />
 										</a>
 										<a class="post-cat" href="#"><?php echo pll__( 'Publication' ) ?></a>
@@ -286,7 +286,7 @@
 						$j = 0;
 					?>
 					<?php if ( count($images)) : ?>
-						<div class="row">
+						<div class="row" style="padding-left: 16px;padding-right: 16px;">
 						<?php foreach ( $images as $image ) : ?>
 							<?php if ($j == 6) continue; ?>
 							<div class="col-md-4" style="padding: 0">
@@ -323,7 +323,7 @@
 							 data-type="youtube"
 							 data-videoid="<?php the_field( 'video' ) ?>"
 							 data-description="<?php the_title() ?>">
-						 <?php endwhile ?>	 
+						<?php endwhile ?>	 
 					</div>
 				</div><!-- Block end -->
 			</div><!-- Gadget Col end -->

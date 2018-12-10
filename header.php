@@ -167,12 +167,12 @@
 
 								
 								<li class="nav-item dropdown">
-									<a href="#" class="nav-link" data-toggle="dropdown">Media <i class="fa fa-angle-down"></i></a>
+									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'Media' ) ?> <i class="fa fa-angle-down"></i></a>
 									<ul class="dropdown-menu" role="menu">
-										<li ><a href="<?php echo home_url( '/photos' ) ?>">Gallery</a></li>
-										<li ><a href="<?php echo home_url( '/videos' ) ?>">Video</a></li>
-										<li ><a href="<?php echo home_url( '/presses-release' ) ?>">Press Release</a></li>
-										<li ><a href="<?php echo home_url( '/publications' ) ?>">Publicatons</a></li>
+										<li ><a href="<?php echo home_url( '/photos' ) ?>"><?php echo pll__( 'Photo' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/videos' ) ?>"><?php echo pll__( 'Videos' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/presses-release' ) ?>"><?php echo pll__( 'Press Release' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/publications' ) ?>"><?php echo pll__( 'Publication' ) ?></a></li>
 									</ul>
 								</li>
 
@@ -198,6 +198,10 @@
 										<li ><a href="<?php echo home_url( '/chemical' ) ?>"><?php echo pll__( 'Chemical' ) ?></a></li>
 										<li ><a href="<?php echo home_url( '/biological' ) ?>"><?php echo pll__( 'Biological' ) ?></a></li>
 									</ul>
+								</li>
+
+								<li>
+									<a class="nav-name" href="<?php echo home_url( '/contact' ) ?>"><?php echo pll__("Contact") ?></a>
 								</li>
 
 								<!-- <li>

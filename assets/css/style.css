@@ -134,7 +134,8 @@ a:visited {
 }
 
 a {
-   color: #ec0000;
+   /*color: #ec0000;*/
+   color: black;
 }
 
 a:hover {

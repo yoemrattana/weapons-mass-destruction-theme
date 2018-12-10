@@ -14,14 +14,14 @@
 			<div class="item">
 				<div class="post-overaly-style text-center clearfix">
 				   <div class="post-thumb">
-				      <a href="#">
-				         <img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" />
+				      <a href="<?php the_permalink(); ?>">
+				         <img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="<?php the_title() ?>" />
 				      </a>
 				   </div><!-- Post thumb end -->
 				   <div class="post-content">
 				      <!-- <a class="post-cat" href="#">Gadgets</a> -->
 				      <h2 class="post-title">
-				         <a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+				         <a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ); ?></a>
 				      </h2>
 				      <div class="post-meta">
 				      	<?php $post_date = get_the_date( 'l F j, Y' ) ?>
