@@ -27,7 +27,7 @@
 								<a title="Google+" href="#">
 									<span class="social-icon"><i class="fa fa-google-plus"></i></span>
 								</a>
-								<a title="Linkdin" href="#">
+								<!-- <a title="Linkdin" href="#">
 									<span class="social-icon"><i class="fa fa-linkedin"></i></span>
 								</a>
 								<a title="Skype" href="#">
@@ -41,7 +41,7 @@
 								</a>
 								<a title="Skype" href="#">
 									<span class="social-icon"><i class="fa fa-instagram"></i></span>
-								</a>
+								</a> -->
 							</li>
 						</ul>
 					</div><!-- Footer info content end -->
