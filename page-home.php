@@ -139,7 +139,7 @@
 										<!-- <a class="post-cat" href="#">Health</a> -->
 										<div class="post-content">
 								 			<h2 class="post-title title-medium">
-								 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 70, '...' ); ?></a>
+								 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 63, '...' ); ?></a>
 								 			</h2>
 								 			<div class="post-meta">
 								 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
