@@ -199,3 +199,9 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true ) {
 }
 
 add_action( 'pagination', 'bootstrap_pagination' );
+
+function add_image_class($class){
+    $class .= ' img-fluid';
+    return $class;
+}
+add_filter('get_image_tag_class','add_image_class');

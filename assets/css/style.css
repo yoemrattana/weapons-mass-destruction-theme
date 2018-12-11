@@ -3068,3 +3068,9 @@ li.active-cat-photo>a{
     width:100%;
     position:absolute;
 }
+
+.limit-excerpt {
+   display: block;
+   max-height: 3em;
+   overflow: hidden;
+}

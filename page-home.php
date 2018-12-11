@@ -29,7 +29,7 @@
 						 			<a class="post-cat" href="#"><?php echo pll__( $category[0]->cat_name ) ?></a>
 
 						 			<h2 class="post-title title-extra-large">
-						 				<a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+						 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 70, '...' ) ?></a>
 						 			</h2>
 						 			<?php $post_date = get_the_date( 'l F j, Y' ) ?>
 								 	<span class="post-date"><?php echo $post_date ?></span>
@@ -111,7 +111,7 @@
 
 <div class="gap-20"></div>
 
-<section class="block-wrapper">
+<section class="block-wrapper no-padding">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-12">
@@ -139,7 +139,7 @@
 										<!-- <a class="post-cat" href="#">Health</a> -->
 										<div class="post-content">
 								 			<h2 class="post-title title-medium">
-								 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 63, '...' ); ?></a>
+								 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 53, '...' ); ?></a>
 								 			</h2>
 								 			<div class="post-meta">
 								 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
@@ -168,7 +168,7 @@
 
 
 
-				<div class="gap-20"></div>
+				<div class="gap-10"></div>
 
 				
 			</div><!-- Content Col end -->

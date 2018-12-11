@@ -30,7 +30,7 @@ $news = new WP_Query($arg);
 							</a>
 						</div><!-- Post thumb end -->
 						<div class="post-content">
-				 			<h2 class="post-title">
+				 			<h2 class="post-title limit-excerpt">
 				 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 100, '...' ); ?></a>
 				 			</h2>								 			
 			 			</div><!-- Post content end -->
