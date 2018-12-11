@@ -36,7 +36,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/colorbox.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Hanuman" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css?family=Moul" rel="stylesheet">
 	<!-- video gallery plugin -->
 
 	<link rel='stylesheet' href='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/css/unite-gallery.css' type='text/css' />
