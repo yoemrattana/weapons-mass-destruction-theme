@@ -3,6 +3,7 @@
     Template Name: Home Page
  * */
  get_header();
+ define( "DONOTCACHEPAGE", true ); 
 ?>
 
 <section class="featured-post-area no-padding">
