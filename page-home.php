@@ -138,7 +138,7 @@
 										</div>
 										<!-- <a class="post-cat" href="#">Health</a> -->
 										<div class="post-content">
-								 			<h2 class="post-title title-medium">
+								 			<h2 class="post-title title-medium limit-excerpt">
 								 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 53, '...' ); ?></a>
 								 			</h2>
 								 			<div class="post-meta">
