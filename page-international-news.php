@@ -18,7 +18,7 @@
 						<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
 						<?php $arg = [
 							'post_type' 		=> 'news_pt',
-							'category_name'		=> 'International',
+							'category_name'		=> 'International,International-en',
 							'orderby' 			=> 'post_id', 
 							'posts_per_page'	=> 8, 
 							'order' 			=> 'DESC', 

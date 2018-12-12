@@ -3,6 +3,7 @@
     Template Name: National News Page
  * */
  get_header();
+ 
 ?>
 
 <div class="gap-20"></div>
@@ -18,7 +19,7 @@
 						<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
 						<?php $arg = [
 							'post_type' 		=> 'news_pt',
-							'category_name'		=> 'National',
+							'category_name'		=> 'National,National-en',
 							'orderby' 			=> 'post_id', 
 							'posts_per_page'	=> 8, 
 							'order' 			=> 'DESC', 
