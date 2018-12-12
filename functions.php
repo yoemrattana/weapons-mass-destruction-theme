@@ -205,3 +205,52 @@ function add_image_class($class){
     return $class;
 }
 add_filter('get_image_tag_class','add_image_class');
+
+// function nacwnews_modify_taxonomy() {
+//     // get the arguments of the already-registered taxonomy
+//     $language_args = get_taxonomy( 'language' ); // returns an object
+
+//     // make changes to the args
+//     // in this example there are three changes
+//     // again, note that it's an object
+//     $language_args->show_in_rest = true;
+
+//     // re-register the taxonomy
+//     register_taxonomy( 'language', 'news_pt', (array) $language_args );
+    
+// }
+// // hook it up to 11 so that it overrides the original register_taxonomy function
+// add_action( 'init', 'nacwnews_modify_taxonomy', 110 );
+
+// function nacwevent_modify_taxonomy() {
+//     // get the arguments of the already-registered taxonomy
+//     $language_args = get_taxonomy( 'language' ); // returns an object
+
+//     // make changes to the args
+//     // in this example there are three changes
+//     // again, note that it's an object
+//     $language_args->show_in_rest = true;
+
+//     // re-register the taxonomy
+    
+//     register_taxonomy( 'language', 'event_pt', (array) $language_args );
+// }
+// // hook it up to 11 so that it overrides the original register_taxonomy function
+// add_action( 'init', 'nacwevent_modify_taxonomy', 111 );
+// fix polylang language segmentation
+
+/*
+* To filter langauge in api ?lang=en or ?lang=km
+*/ 
+function polylang_json_api_init() {
+	global $polylang;
+	$default = pll_default_language();
+	$langs = pll_languages_list();
+	$cur_lang = $_GET['lang'];
+	if (!in_array($cur_lang, $langs)) {
+		$cur_lang = $default;
+	}
+	$polylang->curlang = $polylang->model->get_language($cur_lang);
+	$GLOBALS['text_direction'] = $polylang->curlang->is_rtl ? 'rtl' : 'ltr';
+}
+add_action('rest_api_init', 'polylang_json_api_init');
