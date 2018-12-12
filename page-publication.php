@@ -35,7 +35,7 @@
 									</div>
 									<a class="post-cat" href="#">PDF</a>
 									<div class="post-content">
-							 			<h2 class="post-title">
+							 			<h2 class="post-title limit-excerpt">
 							 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 							 			</h2>
 							 			<div class="post-meta">
