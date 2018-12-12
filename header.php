@@ -181,7 +181,7 @@
 									<ul class="dropdown-menu" role="menu">
 										<li ><a href="<?php echo home_url( '/about' ) ?>"><?php echo pll__( 'About' ) ?></a></li>
 										<li ><a href="<?php echo home_url( '/organization' ) ?>"><?php echo pll__( 'Organization' ) ?></a></li>
-										<li ><a href="<?php echo home_url( '/structure' ) ?>"><?php echo pll__( 'Structure' ) ?></a></li>
+										<!-- <li ><a href="<?php echo home_url( '/structure' ) ?>"><?php echo pll__( 'Structure' ) ?></a></li> -->
 									</ul>
 								</li>
 
