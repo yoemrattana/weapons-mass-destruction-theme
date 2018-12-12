@@ -30,7 +30,7 @@
 								<div class="post-block-style post-float-half clearfix">
 									<div class="post-thumb">
 										<a href="<?php the_permalink(); ?>">
-											<img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" />
+											<img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" style="height: 100px"/>
 										</a>
 									</div>
 									<a class="post-cat" href="#">PDF</a>
