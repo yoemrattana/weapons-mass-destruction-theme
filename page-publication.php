@@ -28,7 +28,7 @@
 						<?php while ( $publications->have_posts() ) : $publications->the_post(); ?>
 							<div class="item">							
 								<div class="post-block-style post-float-half clearfix">
-									<div class="post-thumb">
+									<div class="post-thumb-small">
 										<a href="<?php the_permalink(); ?>">
 											<img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" style="height: 100px"/>
 										</a>

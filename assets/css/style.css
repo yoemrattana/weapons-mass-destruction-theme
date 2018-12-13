@@ -3080,3 +3080,8 @@ li.active-cat-photo>a{
    font-size: 19px;
    margin-top: 10px;
 }
+
+.post-block-style.post-float-half .post-thumb-small img {
+   max-height: 127px;
+   min-height: 131px;
+}
