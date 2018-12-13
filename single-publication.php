@@ -52,37 +52,11 @@ get_header();
 
 				<div class="col-lg-4 col-md-12">
 					<div class="sidebar sidebar-right">
-						<div class="widget color-default">
-						<h3 class="block-title"><span><?php echo pll__('Latest') ?></span></h3>
-						<div class="list-post-block">
-							<ul class="list-post review-post-list">
-								<?php $arg = [
-									'post_type' 		=> 'event_pt', 
-									'orderby' 			=> 'post_id', 
-									'posts_per_page'	=> 8, 
-									'order' 			=> 'DESC']; 
-								?>
-            					<?php $events = new WP_Query($arg) ?>
-								<?php while ( $events->have_posts() ) : $events->the_post(); ?>
-									<li class="clearfix">
-										<div class="post-block-style post-float clearfix">
-											<div class="post-thumb">
-												<a href="<?php the_permalink(); ?>">
-													<img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" />
-												</a>
-											</div><!-- Post thumb end -->
-
-											<div class="post-content">
-									 			<h2 class="post-title">
-									 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-									 			</h2>
-								 			</div><!-- Post content end -->
-										</div><!-- Post block style end -->
-									</li><!-- Li 1 end -->
-								<?php endwhile; ?>
-							</ul><!-- List post end -->
-						</div><!-- List post block end -->
-						</div><!-- Latest Review Widget end -->
+						<?php get_template_part( 'template-parts/widget-news', 'page-international-news' ); ?>
+						<div class="gap-20"></div>
+						<?php get_template_part( 'template-parts/widget-event', 'page-international-news' ); ?>
+						<div class="gap-20"></div>
+						<?php get_template_part( 'template-parts/widget-facebook', 'page-international-news' ); ?>
 					</div><!-- Sidebar right end -->
 				</div><!-- Sidebar Col end -->
 			</div><!-- Row end -->
