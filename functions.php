@@ -254,3 +254,209 @@ function polylang_json_api_init() {
 	$GLOBALS['text_direction'] = $polylang->curlang->is_rtl ? 'rtl' : 'ltr';
 }
 add_action('rest_api_init', 'polylang_json_api_init');
+
+ function nacw_remove_extra_data_news($data, $post, $context) {
+    // We only want to modify the 'view' context, for reading posts 
+    if ($context!== 'view' || is_wp_error ($data)) {
+        $data->data['title'] = $data->data['title']['rendered'] ;
+
+        unset( $data->data['date_gmt'] );
+        unset( $data->data['guid']);
+        unset( $data->data['type']);
+        unset( $data->data['modified']);
+        unset( $data->data['modified_gmt']);
+        unset( $data->data['status']);
+        unset( $data->data['excerpt']);
+        unset( $data->data['template']);
+        unset( $data->data['_links']);
+        $data->data['image'] = $data->data['acf']['image']['url'] ;
+        $data->data['content'] = $data->data['acf']['description'] ;
+        unset( $data->data['acf']);
+        unset( $data->data['links']);
+
+        $data->remove_link( 'collection' );
+	    $data->remove_link( 'self' );
+	    $data->remove_link( 'about' );
+	    $data->remove_link( 'author' );
+	    $data->remove_link( 'replies' );
+	    $data->remove_link( 'version-history' );
+	    $data->remove_link( 'https://api.w.org/featuredmedia' );
+	    $data->remove_link( 'https://api.w.org/attachment' );
+	    $data->remove_link( 'https://api.w.org/term' );
+	    $data->remove_link( 'curies' );
+        //$data->data['excerpt'] = $data->data['excerpt']['rendered'] ;
+         // unset ($data->data['name field to remove']) ;
+         // //or 
+         // unset ($data->data['name field to remove']['name subfield if you only want to delete the sub-field of field' ]); 
+        return $data; 
+     }
+}
+add_filter ('rest_prepare_news_pt' ,'nacw_remove_extra_data_news', 12, 3);
+
+
+ function nacw_remove_extra_data_event($data, $post, $context) {
+    // We only want to modify the 'view' context, for reading posts 
+    if ($context!== 'view' || is_wp_error ($data)) {
+    	$data->data['title'] = $data->data['title']['rendered'] ;
+        unset( $data->data['date_gmt'] );
+        unset( $data->data['guid']);
+        unset( $data->data['type']);
+        unset( $data->data['modified']);
+        unset( $data->data['modified_gmt']);
+        unset( $data->data['status']);
+        unset( $data->data['excerpt']);
+        unset( $data->data['template']);
+        unset( $data->data['_links']);
+        $data->data['image'] = $data->data['acf']['image']['url'] ;
+        $data->data['content'] = $data->data['acf']['description'] ;
+        unset( $data->data['acf']);
+        unset( $data->data['links']);
+
+        $data->remove_link( 'collection' );
+	    $data->remove_link( 'self' );
+	    $data->remove_link( 'about' );
+	    $data->remove_link( 'author' );
+	    $data->remove_link( 'replies' );
+	    $data->remove_link( 'version-history' );
+	    $data->remove_link( 'https://api.w.org/featuredmedia' );
+	    $data->remove_link( 'https://api.w.org/attachment' );
+	    $data->remove_link( 'https://api.w.org/term' );
+	    $data->remove_link( 'curies' );
+         return $data; 
+     }
+}
+add_filter ('rest_prepare_event_pt' ,'nacw_remove_extra_data_event', 12, 3);
+
+function nacw_remove_extra_data_video($data, $post, $context) {
+    // We only want to modify the 'view' context, for reading posts 
+    if ($context!== 'view' || is_wp_error ($data)) {
+    	$data->data['title'] = $data->data['title']['rendered'] ;
+        unset( $data->data['date_gmt'] );
+        unset( $data->data['guid']);
+        unset( $data->data['type']);
+        unset( $data->data['modified']);
+        unset( $data->data['modified_gmt']);
+        unset( $data->data['status']);
+        unset( $data->data['excerpt']);
+        unset( $data->data['template']);
+        unset( $data->data['link']);
+        $data->data['image'] = $data->data['acf']['image']['url'] ;
+        $data->data['video_id'] = $data->data['acf']['video'] ;
+        unset( $data->data['acf']);
+        unset( $data->data['links']);
+
+        $data->remove_link( 'collection' );
+	    $data->remove_link( 'self' );
+	    $data->remove_link( 'about' );
+	    $data->remove_link( 'author' );
+	    $data->remove_link( 'replies' );
+	    $data->remove_link( 'version-history' );
+	    $data->remove_link( 'https://api.w.org/featuredmedia' );
+	    $data->remove_link( 'https://api.w.org/attachment' );
+	    $data->remove_link( 'https://api.w.org/term' );
+	    $data->remove_link( 'curies' );
+         return $data; 
+     }
+}
+add_filter ('rest_prepare_video' ,'nacw_remove_extra_data_video', 12, 3);
+
+function nacw_remove_extra_data_press_release($data, $post, $context) {
+    // We only want to modify the 'view' context, for reading posts 
+    if ($context!== 'view' || is_wp_error ($data)) {
+    	$data->data['title'] = $data->data['title']['rendered'] ;
+        unset( $data->data['date_gmt'] );
+        unset( $data->data['guid']);
+        unset( $data->data['type']);
+        unset( $data->data['modified']);
+        unset( $data->data['modified_gmt']);
+        unset( $data->data['status']);
+        unset( $data->data['excerpt']);
+        unset( $data->data['template']);
+        unset( $data->data['_links']);
+        $data->data['image'] = $data->data['acf']['image']['url'] ;
+        $data->data['content'] = $data->data['content']['rendered'] ;
+        unset( $data->data['acf']);
+        unset( $data->data['links']);
+
+        $data->remove_link( 'collection' );
+	    $data->remove_link( 'self' );
+	    $data->remove_link( 'about' );
+	    $data->remove_link( 'author' );
+	    $data->remove_link( 'replies' );
+	    $data->remove_link( 'version-history' );
+	    $data->remove_link( 'https://api.w.org/featuredmedia' );
+	    $data->remove_link( 'https://api.w.org/attachment' );
+	    $data->remove_link( 'https://api.w.org/term' );
+	    $data->remove_link( 'curies' );
+         return $data; 
+     }
+}
+add_filter ('rest_prepare_press_release' ,'nacw_remove_extra_data_press_release', 12, 3);
+
+
+function nacw_remove_extra_data_publicaton($data, $post, $context) {
+    // We only want to modify the 'view' context, for reading posts 
+    if ($context!== 'view' || is_wp_error ($data)) {
+    	$data->data['title'] = $data->data['title']['rendered'] ;
+        unset( $data->data['date_gmt'] );
+        unset( $data->data['guid']);
+        unset( $data->data['type']);
+        unset( $data->data['modified']);
+        unset( $data->data['modified_gmt']);
+        unset( $data->data['status']);
+        unset( $data->data['excerpt']);
+        unset( $data->data['template']);
+        unset( $data->data['_links']);
+        $data->data['image'] = $data->data['acf']['image']['url'] ;
+        $data->data['content'] = $data->data['content']['rendered'] ;
+        unset( $data->data['acf']);
+        unset( $data->data['links']);
+
+        $data->remove_link( 'collection' );
+	    $data->remove_link( 'self' );
+	    $data->remove_link( 'about' );
+	    $data->remove_link( 'author' );
+	    $data->remove_link( 'replies' );
+	    $data->remove_link( 'version-history' );
+	    $data->remove_link( 'https://api.w.org/featuredmedia' );
+	    $data->remove_link( 'https://api.w.org/attachment' );
+	    $data->remove_link( 'https://api.w.org/term' );
+	    $data->remove_link( 'curies' );
+         return $data; 
+     }
+}
+add_filter ('rest_prepare_publication' ,'nacw_remove_extra_data_publicaton', 12, 3);
+
+
+/*function nacw_remove_extra_data_publicaton1($data, $post, $context) {
+    // We only want to modify the 'view' context, for reading posts 
+    if ($context!== 'view' || is_wp_error ($data)) {
+    	$data->data['title'] = $data->data['title']['rendered'] ;
+        unset( $data->data['date_gmt'] );
+        unset( $data->data['guid']);
+        unset( $data->data['type']);
+        unset( $data->data['modified']);
+        unset( $data->data['modified_gmt']);
+        unset( $data->data['status']);
+        unset( $data->data['excerpt']);
+        unset( $data->data['template']);
+        unset( $data->data['_links']);
+        $data->data['image'] = $data->data['acf']['image']['url'] ;
+        $data->data['content'] = $data->data['content']['rendered'] ;
+        unset( $data->data['acf']);
+        unset( $data->data['links']);
+
+        $data->remove_link( 'collection' );
+	    $data->remove_link( 'self' );
+	    $data->remove_link( 'about' );
+	    $data->remove_link( 'author' );
+	    $data->remove_link( 'replies' );
+	    $data->remove_link( 'version-history' );
+	    $data->remove_link( 'https://api.w.org/featuredmedia' );
+	    $data->remove_link( 'https://api.w.org/attachment' );
+	    $data->remove_link( 'https://api.w.org/term' );
+	    $data->remove_link( 'curies' );
+         return $data; 
+     }
+}
+add_filter ('rest_prepare_post' ,'nacw_remove_extra_data_publicaton1', 10, 3);*/
