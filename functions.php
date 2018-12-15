@@ -569,35 +569,55 @@ add_action( 'rest_api_init', function () {
 
 
 
-function nacw_remove_extra_data_publicaton1($data, $page, $context) {
+function nacw_remove_extra_data_publicaton1($data, $post, $context) {
     // We only want to modify the 'view' context, for reading posts 
     if ($context!== 'view' || is_wp_error ($data)) {
     	$data->data['title'] = $data->data['title']['rendered'] ;
         unset( $data->data['date_gmt'] );
-     //    unset( $data->data['guid']);
-     //    unset( $data->data['type']);
-     //    unset( $data->data['modified']);
-     //    unset( $data->data['modified_gmt']);
-     //    unset( $data->data['status']);
-     //    unset( $data->data['excerpt']);
-     //    unset( $data->data['template']);
-     //    unset( $data->data['_links']);
+        unset( $data->data['guid']);
+        unset( $data->data['type']);
+        unset( $data->data['modified']);
+        unset( $data->data['modified_gmt']);
+        unset( $data->data['status']);
+        unset( $data->data['excerpt']);
+        unset( $data->data['template']);
+        unset( $data->data['_links']);
+        unset( $data->data['author']);
+        unset( $data->data['featured_media']);
+        unset( $data->data['parent']);
+        unset( $data->data['menu_order']);
+        unset( $data->data['comment_status']);
+        unset( $data->data['ping_status']);
+        unset( $data->data['meta']);
+        unset( $data->data['ping_status']);
+        
      //    $data->data['image'] = $data->data['acf']['image']['url'] ;
-     //    $data->data['content'] = $data->data['content']['rendered'] ;
-     //    unset( $data->data['acf']);
-     //    unset( $data->data['links']);
-
-     //    $data->remove_link( 'collection' );
-	    // $data->remove_link( 'self' );
-	    // $data->remove_link( 'about' );
-	    // $data->remove_link( 'author' );
-	    // $data->remove_link( 'replies' );
-	    // $data->remove_link( 'version-history' );
-	    // $data->remove_link( 'https://api.w.org/featuredmedia' );
-	    // $data->remove_link( 'https://api.w.org/attachment' );
-	    // $data->remove_link( 'https://api.w.org/term' );
-	    // $data->remove_link( 'curies' );
-         return $data; 
+        $data->data['content'] = wp_strip_all_tags( $data->data['content']['rendered'] );
+        
+        unset( $data->data['link']);
+        if ( $data->data['slug'] === 'contacts' || $data->data['slug'] === 'contacts-en' ) {
+        	
+        	$data->data['phone'] = $data->data['acf']['phone'];
+        	$data->data['email'] = $data->data['acf']['email'];
+        	$data->data['address'] = $data->data['acf']['address'];
+        	$data->data['map'] = $data->data['acf']['map'];
+        }
+        unset( $data->data['acf']);
+        
+        $data->remove_link( 'collection' );
+	    $data->remove_link( 'self' );
+	    $data->remove_link( 'about' );
+	    $data->remove_link( 'author' );
+	    $data->remove_link( 'replies' );
+	    $data->remove_link( 'version-history' );
+	    $data->remove_link( 'predecessor-version' );
+	    $data->remove_link( 'wp:attachment' );
+	    $data->remove_link( 'https://api.w.org/featuredmedia' );
+	    $data->remove_link( 'https://api.w.org/attachment' );
+	    $data->remove_link( 'https://api.w.org/term' );
+	    $data->remove_link( 'curies' );
+        return $data; 
      }
 }
-add_filter ('rest_prepare_pages' ,'nacw_remove_extra_data_publicaton1', 12, 3);
+add_filter ('rest_prepare_page' ,'nacw_remove_extra_data_publicaton1', 12, 3);
+
