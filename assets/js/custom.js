@@ -101,12 +101,13 @@ jQuery(function($) {
 			dots:false,
 			mouseDrag:true,
 			touchDrag:true,
-			slideSpeed:500,
+			slideSpeed:200,
 			navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
 			items : 1,
 			responsive:{
 			  0:{
 					items:1
+
 			  },
 			  600:{
 					items:1

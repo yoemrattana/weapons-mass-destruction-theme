@@ -2,113 +2,18 @@
 /*
     Template Name: Home Page
  * */
- get_header();
- define( "DONOTCACHEPAGE", true ); 
+define( "DONOTCACHEPAGE", true ); 
+get_header(); 
 ?>
-
 <section class="featured-post-area no-padding">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-7 col-md-12 pad-r">
-
-				<div id="featured-slider" class="owl-carousel owl-theme featured-slider">
-					<?php $arg = [
-							'post_type' 	=> ['news_pt'],
-							'orderby' 		=> 'post_id', 
-							'posts_per_page'=> 16, 
-							'order' 		=> 'DESC'
-						]; 
-					?>
-            		<?php $news = new WP_Query($arg) ?>
-            		<?php while ( $news->have_posts() ) : $news->the_post(); ?>
-						<div class="item" style="background-image:url(<?php echo  get_field('image')['url']?>)">
-							<div class="featured-post">
-						 		<div class="post-content">
-						 			<?php 
-										$category = get_the_category( get_the_ID() ); 
-									?>
-						 			<a class="post-cat" href="#"><?php echo pll__( $category[0]->cat_name ) ?></a>
-
-						 			<h2 class="post-title title-extra-large">
-						 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 70, '...' ) ?></a>
-						 			</h2>
-						 			<?php $post_date = get_the_date( 'l F j, Y' ) ?>
-								 	<span class="post-date"><?php echo $post_date ?></span>
-						 		</div>
-						 	</div><!--/ Featured post end -->
-						</div><!-- Item 1 end -->
-					<?php endwhile ?>
-				</div><!-- Featured owl carousel end-->
-
-			</div><!-- Col 7 end -->
-
-			<div class="col-lg-5 col-md-12 pad-l right-slide-obj">
-				<div class="row">
-					<?php $arg = [
-						'post_type' 	=> ['news_pt'],
-						'orderby' 		=> 'rand',
-						'posts_per_page'=> 3]; 
-					?>
-            		<?php $news = new WP_Query($arg) ?>
-					<?php $i = 0 ?>
-					<?php while ( $news->have_posts() ) : $news->the_post(); ?>
-						<?php $post_type = get_post_type( get_the_ID() ) ?>
-						<?php $post_date = get_the_date( 'l F j, Y' ) ?>
-						<?php if ( $i == 0 ) : ?>
-							<div class="col-md-12">
-								<div class="post-overaly-style contentTop hot-post-top clearfix">
-									<div class="post-thumb">
-										<a href="<?php the_permalink(); ?>"><img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" /></a>
-									</div>
-									<div class="post-content">
-										<?php 
-											$category = get_the_category( get_the_ID() ); 
-										?>
-							 			<a class="post-cat" href="#"><?php echo pll__( $category[0]->cat_name ) ?></a>
-							 			<h2 class="post-title title-large">
-							 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 70, '...' ) ?></a>
-							 			</h2>
-							 			<span class="post-date"><?php echo $post_date ?></span>
-						 			</div><!-- Post content end -->
-								</div><!-- Post Overaly end -->
-							</div><!-- Col end -->
-						<?php elseif ( $i == 1) : ?>
-							<div class="col-md-6 pad-r-small">
-								<div class="post-overaly-style contentTop hot-post-bottom clearfix">
-									<div class="post-thumb">
-										<a href="<?php the_permalink(); ?>"><img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" /></a>
-									</div>
-									<div class="post-content">
-							 			<a class="post-cat" href="#"><?php echo pll__( $category[0]->cat_name ) ?></a>
-							 			<h2 class="post-title title-medium">
-							 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 70, '...' ) ?></a>
-							 			</h2>
-						 			</div><!-- Post content end -->
-								</div><!-- Post Overaly end -->
-							</div><!-- Col end -->
-						<?php else : ?>	
-							<div class="col-md-6 pad-l-small">
-								<div class="post-overaly-style contentTop hot-post-bottom clearfix">
-									<div class="post-thumb">
-										<a href="<?php the_permalink(); ?>"><img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" /></a>
-									</div>
-									<div class="post-content">
-							 			<a class="post-cat" href="#"><?php echo pll__( $category[0]->cat_name ) ?></a>
-							 			<h2 class="post-title title-medium">
-							 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 70, '...' ) ?></a>
-							 			</h2>
-						 			</div><!-- Post content end -->
-								</div><!-- Post Overaly end -->
-							</div><!-- Col end -->
-						<?php endif ?>
-					<?php $i++ ?>
-					<?php endwhile ?>
-				</div>
-			</div><!-- Col 5 end -->
-
-		</div><!-- Row end -->
-	</div><!-- Container end -->
-</section><!-- Trending post end -->
+			<div class="col-sm-12">
+				<?php echo do_shortcode('[metaslider id="254"]'); ?>
+			</div>
+		</div>
+	</div>
+</section>
 
 <div class="gap-20"></div>
 
