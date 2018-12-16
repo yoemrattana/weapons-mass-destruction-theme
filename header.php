@@ -79,7 +79,7 @@ $lang = get_bloginfo("language");
 					<ul class="unstyled">
 						<li>
 							<a title="Facebook" href="https://web.facebook.com/NACWCambodia/">
-								<span class="social-icon"><i class="fa fa-facebook"></i></span>
+								<span class="social-icon"><i class="fa fa-facebook-square"></i></span>
 							</a>
 							<!-- <a title="Twitter" href="#">
 								<span class="social-icon"><i class="fa fa-twitter"></i></span>

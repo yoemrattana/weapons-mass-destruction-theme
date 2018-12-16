@@ -19,7 +19,7 @@
 									<span class="social-icon"><i class="fa fa-rss"></i></span>
 								</a> -->
 								<a title="Facebook" href="https://web.facebook.com/NACWCambodia/" target="_blank">
-									<span class="social-icon"><i class="fa fa-facebook"></i></span>
+									<span class="social-icon"><i class="fa fa-facebook-square"></i></span>
 								</a>
 								<!-- <a title="Twitter" href="#">
 									<span class="social-icon"><i class="fa fa-twitter"></i></span>
