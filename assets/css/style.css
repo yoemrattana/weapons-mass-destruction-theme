@@ -61,7 +61,8 @@ body {
 
 body,
 p {
-   font-family: 'Open Sans', sans-serif;
+   /*font-family: 'Open Sans', sans-serif;*/
+   font-family: 'Hanuman', 'Noto Serif' !important;
    line-height: 24px;
    font-size: 14px;
    text-rendering: optimizeLegibility;
