@@ -115,7 +115,7 @@ get_header();
 								<div class="post-block-style post-float clearfix">
 									<div class="post-thumb">
 										<a href="<?php the_permalink(); ?>">
-											<img class="img-fluid" src="<?php echo get_field( 'image' )['url'] ?>" alt="" />
+											<img class="img-fluid" src="<?php echo get_field( 'image' )['url'] ?>" alt="" style="width:70px"/>
 										</a>
 										<a class="post-cat" href="#"><?php echo pll__( 'Press Release' ) ?></a>
 									</div><!-- Post thumb end -->
