@@ -33,6 +33,9 @@ get_header();
 					<div id="latest-news-slide" class="owl-carousel owl-theme latest-news-slide">
 						<?php $count_nuclear = 0 ?>
 						<?php while ( $news->have_posts() ) : $news->the_post(); ?>
+						<?php if ( $count_nuclear % 2 == 0 ) : ?>	
+						<div class="item">
+						<?php endif ?>	
 							<ul class="list-post">
 								<li class="clearfix">
 									<div class="post-block-style clearfix">
@@ -52,9 +55,20 @@ get_header();
 							 			</div><!-- Post content end -->
 									</div><!-- Post Block style end -->
 								</li><!-- Li end -->
-							</ul>
 
-						<?php endwhile ?>
+							</ul>	
+								<?php if ( $count_nuclear % 2 == 0 ) : ?>
+									<div class="gap-30"></div>
+								<?php endif ?>	
+								
+						<?php if ( $count_nuclear % 2 != 0 ) : ?>
+						</div>
+						<?php endif ?>
+						<?php $count_nuclear++ ?>
+						<?php endwhile; ?>
+						<?php if ( $count_nuclear % 2 != 0 ) : ?>
+						</div>
+						<?php endif ?>
 					</div><!-- Latest News owl carousel end-->
 				</div><!--- Latest news end -->
 
