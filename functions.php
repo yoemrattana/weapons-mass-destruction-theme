@@ -513,7 +513,7 @@ add_filter ('rest_prepare_publication' ,'nacw_remove_extra_data_publicaton', 12,
 }
 add_filter ('rest_prepare_post' ,'nacw_remove_extra_data_publicaton1', 10, 3);*/
 
-function my_endpoint( $request_data ) {
+function nacw( $request_data ) {
 	// setup query argument
 	$args = array(
 		'post_type' => 'photo',
@@ -524,6 +524,8 @@ function my_endpoint( $request_data ) {
 
 	// add custom field data to posts array	
 	foreach ($posts as $key => $post) {
+			//$posts[$key]->id = $posts[$key]->ID;
+
 			unset( $posts[$key]->post_author );
 			unset( $posts[$key]->post_date_gmt );
 			unset( $posts[$key]->post_content );
@@ -546,30 +548,33 @@ function my_endpoint( $request_data ) {
 
 
 			//$posts[$key]->acf = get_fields($post->ID);
-			$posts[$key]->gallery = acf_photo_gallery( 'photo_gallery', $post->ID );
+			$images = acf_photo_gallery( 'photo_gallery', $post->ID );
+
+			$full_image_url = [];
+	        foreach ( $images as $image) {
+	        	$full_image_url[] = $image['full_image_url'];
+	        }
+
+			$posts[$key]->gallery = $full_image_url;
 			//$posts[$key]->link = get_permalink($post->ID);
 			//$posts[$key]->image = get_the_post_thumbnail_url($post->ID);
+
+			//unset( $posts[$key]->ID );
 	}
 
-
-
 	return $posts;
-
-
 }
 
 // register the endpoint
 add_action( 'rest_api_init', function () {
-	register_rest_route( 'my_endpoint/v1', '/my_post_type/', array(
+	register_rest_route( 'nacw/v1', '/photo/', array(
 		'methods' => 'GET',
-		'callback' => 'my_endpoint',
+		'callback' => 'nacw',
 		)
 	);
 });
 
-
-
-function nacw_remove_extra_data_publicaton1($data, $post, $context) {
+function nacw_remove_extra_data_pages($data, $post, $context) {
     // We only want to modify the 'view' context, for reading posts 
     if ($context!== 'view' || is_wp_error ($data)) {
     	$data->data['title'] = $data->data['title']['rendered'] ;
@@ -619,5 +624,4 @@ function nacw_remove_extra_data_publicaton1($data, $post, $context) {
         return $data; 
      }
 }
-add_filter ('rest_prepare_page' ,'nacw_remove_extra_data_publicaton1', 12, 3);
-
+add_filter ('rest_prepare_page' ,'nacw_remove_extra_data_pages', 12, 3);
