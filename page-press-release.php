@@ -26,7 +26,7 @@
             			<?php $presses_release = new WP_Query($arg) ?>
             			<?php $count_nuclear = 0 ?>
 						<?php while ( $presses_release->have_posts() ) : $presses_release->the_post(); ?>
-							<div class="item">							
+							<!-- <div class="item">							
 								<div class="post-block-style post-float-half clearfix">
 									<div class="post-thumb-small">
 										<a href="<?php the_permalink(); ?>">
@@ -39,17 +39,32 @@
 							 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 							 			</h2>
 							 			<div class="post-meta">
-							 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
+							 				
 							 				<?php $post_date = get_the_date( 'l F j, Y' ) ?>
 								 			<span class="post-date"><?php echo $post_date ?></span>
 							 			</div>
 							 			<p><?php the_excerpt() ?></p>
-						 			</div><!-- Post content end -->
-								</div><!-- Post Block style 1 end -->
+						 			</div>
 
 								<div class="gap-20"></div>
 
-							</div>
+							</div> -->
+
+							<li class="clearfix" style="list-style: none;">
+								<div class="post-block-style post-float clearfix">
+									<div class="post-thumb">
+										<a href="<?php the_permalink(); ?>">
+											<img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="<?php the_title() ?>" />
+										</a>
+									</div><!-- Post thumb end -->
+									<div class="post-content">
+							 			<h2 class="post-title limit-excerpt" style="font-size: 14px">
+							 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 100, '...' ); ?></a>
+							 			</h2>								 			
+						 			</div><!-- Post content end -->
+								</div><!-- Post block style end -->
+							</li><!-- Li 1 end -->
+							<div class="gap-20"></div>
 							
 						<?php $count_nuclear++ ?>
 						<?php endwhile; ?>
