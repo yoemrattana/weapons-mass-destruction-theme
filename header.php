@@ -37,6 +37,7 @@ $lang = get_bloginfo("language");
 
 	<link href="https://fonts.googleapis.com/css?family=Hanuman" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Moul" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bokor" rel="stylesheet">
 	<!-- video gallery plugin -->
 
 	<link rel='stylesheet' href='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/css/unite-gallery.css' type='text/css' />
@@ -78,8 +79,8 @@ $lang = get_bloginfo("language");
 				<div class="col-md-4 top-social text-lg-right text-md-center">
 					<ul class="unstyled">
 						<li>
-							<a title="Facebook" href="https://web.facebook.com/NACWCambodia/">
-								<span class="social-icon"><i class="fa fa-facebook-square"></i></span>
+							<a  title="Facebook" href="https://web.facebook.com/NACWCambodia/">
+								<span class="social-icon"><i class="fa fa-facebook-square" style="color:blue"></i></span>
 							</a>
 							<!-- <a title="Twitter" href="#">
 								<span class="social-icon"><i class="fa fa-twitter"></i></span>
@@ -138,7 +139,7 @@ $lang = get_bloginfo("language");
 						<!-- End of Navbar toggler -->
 
 						<div id="navbarSupportedContent" class="collapse navbar-collapse navbar-responsive-collapse">
-							<ul class="nav navbar-nav" style="font-family: Hanuman;">
+							<ul class="nav navbar-nav" style="font-family: Bokor;">
 								<?php if ( $lang == 'km' ) : ?>
 									<li>
 										<a class="nav-name" href="<?php echo home_url( '/' ) ?>"><?php echo pll__("Home") ?></a>

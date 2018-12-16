@@ -1300,6 +1300,8 @@ ul.top-info-box>li.nav-search i {
    background: #ec0000;
    height: 30px;
    width: 35px;
+   /*z-index: 999;
+   transition: all 0.3s ease-out;*/
 }
 
 .navbar-toggler-icon {
@@ -3079,11 +3081,13 @@ li.active-cat-photo>a{
 
 .organization-title {
    font-family: 'Moul', cursive;
-   font-size: 19px;
+   font-size: 15px;
    margin-top: 10px;
+   color: white;
 }
 
 .post-block-style.post-float-half .post-thumb-small img {
    max-height: 127px;
    min-height: 131px;
-}s
+
+}

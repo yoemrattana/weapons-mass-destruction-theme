@@ -10,7 +10,7 @@
 						<div class="footer-logo">
 							<img class="img-fluid" src="<?php bloginfo('stylesheet_directory');?>/assets/images/logos/logo.png" alt="logo"  />
 						</div>
-						<p style="font-family: 'Moul', cursive;" class="organization-title">អាជ្ញាធរជាតិអាវុធគីមី</p>
+						<h5 class="organization-title">អាជ្ញាធរជាតិអាវុធគីមី</h5>
 						<p class="footer-info-phone"><i class="fa fa-phone"></i> <?php echo get_field( 'phone', 165 ) ?></p>
 						<p class="footer-info-email"><i class="fa fa-envelope-o"></i> <?php echo get_field( 'email', 165 ) ?></p>
 						<ul class="unstyled footer-social">
@@ -19,7 +19,7 @@
 									<span class="social-icon"><i class="fa fa-rss"></i></span>
 								</a> -->
 								<a title="Facebook" href="https://web.facebook.com/NACWCambodia/" target="_blank">
-									<span class="social-icon"><i class="fa fa-facebook-square"></i></span>
+									<span class="social-icon"><i class="fa fa-facebook-square" style="color:blue"></i></span>
 								</a>
 								<!-- <a title="Twitter" href="#">
 									<span class="social-icon"><i class="fa fa-twitter"></i></span>
