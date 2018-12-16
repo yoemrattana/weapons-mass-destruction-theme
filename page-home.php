@@ -189,7 +189,7 @@
 
 <section class="block-wrapper no-padding">
 	<div class="container">
-		<div class="block color-orange">
+		<div class="block color-blue">
 			<h3 class="block-title" style="margin-bottom: 0;"><span><?php echo pll__( 'Press Release and Publication' ) ?></span></h3>
 
 			<div class="row">
@@ -278,7 +278,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
-				<div class="block color-dark-blue">
+				<div class="block color-blue">
 					<h3 class="block-title"><span><?php echo pll__('Photo') ?></span></h3>
 					<?php
 
@@ -313,7 +313,7 @@
 			</div><!-- Travel Col end -->
 
 			<div class="col-lg-6">
-				<div class="block color-aqua">
+				<div class="block color-blue">
 					<h3 class="block-title"><span><?php echo pll__('Videos'); ?></span></h3>
 					<div id="gallery-video" style="display:none;">
 						<?php $arg = [

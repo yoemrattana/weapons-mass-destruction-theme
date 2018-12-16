@@ -505,7 +505,8 @@ a[href^=tel] {
 /*-- Block title --*/
 
 .block-title {
-   font-family: "Hanuman",  "Noto Serif";
+   /*font-family: "Hanuman",  "Noto Serif";*/
+   font-family: 'Moul', cursive;
    font-size: 14px;
    line-height: 100%;
    text-transform: uppercase;

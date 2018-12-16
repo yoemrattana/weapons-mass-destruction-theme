@@ -1,4 +1,8 @@
+<?php if ( is_page( 'home' ) || is_page( 'home-en' ) ) : ?>
+<div class="widget color-blue">
+<?php else : ?>
 <div class="widget color-default">
+<?php endif; ?>
 	<h3 class="block-title"><span><?php echo pll__('Event') ?></span></h3>
 
 	<div id="post-slide" class="owl-carousel owl-theme post-slide">
