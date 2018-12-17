@@ -8,6 +8,8 @@
  */
 
 get_header();
+
+setPostViews(get_the_ID());
 ?>
 
 	<section class="block-wrapper no-padding">

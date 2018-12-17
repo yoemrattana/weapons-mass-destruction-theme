@@ -46,14 +46,15 @@ get_header();
 								<a class="post-cat" href="#"><?php echo pll__( $category[0]->cat_name ); ?></a>
 								<div class="post-content">
 						 			<h2 class="post-title title-small limit-excerpt">
-						 				<a href="#"><?php echo wp_html_excerpt( get_the_title(), 53, '...' ); ?></a>
+						 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 53, '...' ); ?></a>
 						 			</h2>
 						 			<div class="post-meta">
 						 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
 						 				<?php $post_date = get_the_date( 'd-m-Y' ) ?>
 								 		<span class="post-date"><i class="fa fa-clock-o"></i><?php echo $post_date ?></span>
-						 				<!-- <span class="post-comment pull-right"><i class="fa fa-comments-o"></i>
-										<a href="#" class="comments-link"><span>03</span></a></span> -->
+								 		
+						 				<span class="post-comment pull-right"><i class="fa fa-eye"></i>
+										<a href="#" class="comments-link"><span><?php echo getPostViews(get_the_ID()) ?></span></a></span>
 						 			</div>
 						 			
 					 			</div><!-- Post content end -->
