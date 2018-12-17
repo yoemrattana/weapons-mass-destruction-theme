@@ -127,7 +127,7 @@ get_header();
 								</div><!-- Post block style end -->
 							</li><!-- Li 1 end -->
 						<?php endwhile ?>	
-
+						<div class="gap-10"></div>
 						</ul><!-- List post end -->
 					</div><!-- List post block end -->
 				</div><!-- Col 1 end -->
