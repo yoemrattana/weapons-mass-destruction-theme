@@ -3091,3 +3091,15 @@ li.active-cat-photo>a{
    min-height: 131px;
 
 }
+
+/*.flex-control-paging li a.flex-active {
+   color: blue;
+}*/
+@media (max-width: 375px) {
+   #header {
+      padding-bottom: 0;
+   }
+   /*.logo img {
+      height: 82px;      
+   }*/
+}
