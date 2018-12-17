@@ -506,7 +506,7 @@ a[href^=tel] {
 
 .block-title {
    /*font-family: "Hanuman",  "Noto Serif";*/
-   font-family: 'Moul', cursive;
+   font-family: 'Angkor', cursive;
    font-size: 14px;
    line-height: 100%;
    text-transform: uppercase;
@@ -3103,3 +3103,4 @@ li.active-cat-photo>a{
       height: 82px;      
    }*/
 }
+

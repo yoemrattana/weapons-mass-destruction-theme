@@ -38,6 +38,8 @@ $lang = get_bloginfo("language");
 	<link href="https://fonts.googleapis.com/css?family=Hanuman" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Moul" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Bokor" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Angkor|Odor+Mean+Chey" rel="stylesheet">
 	<!-- video gallery plugin -->
 
 	<link rel='stylesheet' href='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/css/unite-gallery.css' type='text/css' />
@@ -60,6 +62,9 @@ $lang = get_bloginfo("language");
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
+					<div class="ts-date">
+						<i class="fa fa-calendar-check-o"></i><?php echo date( 'd-m-Y' ) ?>
+					</div>
 					<ul class="unstyled top-nav">
 						<?php
 							wp_nav_menu( array(
@@ -71,8 +76,7 @@ $lang = get_bloginfo("language");
 								//'menu_class'      => 'nav navbar-nav'
 							))
 						?>
-						<!-- <li><a href="#">Khmer</a></li>
-						<li><a href="#">English</a></li> -->
+						
 					</ul>
 				</div><!--/ Top bar left end -->
 
@@ -139,7 +143,7 @@ $lang = get_bloginfo("language");
 						<!-- End of Navbar toggler -->
 
 						<div id="navbarSupportedContent" class="collapse navbar-collapse navbar-responsive-collapse">
-							<ul class="nav navbar-nav" style="font-family: Bokor;">
+							<ul class="nav navbar-nav" style="font-family: 'Odor Mean Chey', cursive;">
 								<?php if ( $lang == 'km' ) : ?>
 									<li>
 										<a class="nav-name" href="<?php echo home_url( '/' ) ?>"><?php echo pll__("Home") ?></a>
