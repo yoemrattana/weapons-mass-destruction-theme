@@ -3104,3 +3104,10 @@ li.active-cat-photo>a{
    }*/
 }
 
+.color-blue a.post-cat {
+   background: #3B5998;
+}
+
+.color-blue .post-cat:before {
+    border-top: 8px solid #3B5998;
+}

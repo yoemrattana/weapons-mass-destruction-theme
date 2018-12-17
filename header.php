@@ -260,5 +260,3 @@ $lang = get_bloginfo("language");
 		</div><!--/ Container end -->
 
 	</div><!-- Menu wrapper end -->
-
-	<div class="gap-20"></div>
