@@ -62,11 +62,11 @@
 			</div>
 		</div><!-- Row end -->
 
-		<div id="back-to-top" class="back-to-top">
+		<!-- <div id="back-to-top" class="back-to-top">
 			<button class="btn btn-primary" title="Back to Top">
 				<i class="fa fa-angle-up"></i>
 			</button>
-		</div>
+		</div> -->
 
 	</div><!-- Container end -->
 </div><!-- Copyright end -->
