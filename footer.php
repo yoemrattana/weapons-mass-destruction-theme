@@ -90,7 +90,8 @@
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/assets/js/custom.js"></script>
 
 <script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/js/unitegallery.min.js'></script>	
-<?php if ( is_page( 'home' ) ) : ?>
+
+<?php if ( is_page( 'home' ) || is_page( 'home-en' ) ) : ?>
 <script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/themes/default/ug-theme-default.js'></script>
 <?php endif ?>
 <script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/themes/tiles/ug-theme-tiles.js'></script>

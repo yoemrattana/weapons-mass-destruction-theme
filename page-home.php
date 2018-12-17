@@ -50,8 +50,8 @@ get_header();
 						 			</h2>
 						 			<div class="post-meta">
 						 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
-						 				<?php $post_date = get_the_date( 'l F j, Y' ) ?>
-								 		<span class="post-date"><?php echo $post_date ?></span>
+						 				<?php $post_date = get_the_date( 'd-m-Y' ) ?>
+								 		<span class="post-date"><i class="fa fa-clock-o"></i><?php echo $post_date ?></span>
 						 				<!-- <span class="post-comment pull-right"><i class="fa fa-comments-o"></i>
 										<a href="#" class="comments-link"><span>03</span></a></span> -->
 						 			</div>
@@ -119,8 +119,8 @@ get_header();
 							 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ) ?> </a>
 							 			</h2>
 							 			<div class="post-meta">
-							 				<?php $post_date = get_the_date( 'l F j, Y' ) ?>
-								 			<span class="post-date"><?php echo $post_date ?></span>
+							 				<?php $post_date = get_the_date( 'd-m-Y' ) ?>
+								 			<span class="post-date"><i class="fa fa-clock-o"></i><?php echo $post_date ?></span>
 							 			</div>
 						 			</div><!-- Post content end -->
 								</div><!-- Post block style end -->
@@ -157,8 +157,8 @@ get_header();
 							 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ) ?> </a>
 							 			</h2>
 							 			<div class="post-meta">
-							 				<?php $post_date = get_the_date( 'l F j, Y' ) ?>
-								 			<span class="post-date"><?php echo $post_date ?></span>
+							 				<?php $post_date = get_the_date( 'd-m-Y' ) ?>
+								 			<span class="post-date"><i class="fa fa-clock-o"></i><?php echo $post_date ?></span>
 							 			</div>
 						 			</div><!-- Post content end -->
 								</div><!-- Post block style end -->
