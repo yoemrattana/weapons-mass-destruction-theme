@@ -56,7 +56,7 @@ get_header();
 						 				<span class="post-comment pull-right"><i class="fa fa-eye"></i>
 										<a href="#" class="comments-link"><span><?php echo getPostViews(get_the_ID()) ?></span></a></span>
 						 			</div>
-						 			
+						 			<p><?php echo wp_html_excerpt( get_the_excerpt(), 100, '...' ) ?></p>
 					 			</div><!-- Post content end -->
 							</div><!-- Post Block style end -->
 						</div><!-- Col 1 end -->
