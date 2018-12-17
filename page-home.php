@@ -24,52 +24,46 @@ get_header();
 				<?php $arg = [
 					'post_type' 	=> 'news_pt', 
 					'orderby' 		=> 'post_id',
-					'posts_per_page'=> 16, 
+					'posts_per_page'=> 9, 
 					'order' 		=> 'DESC']; 
 				?>
             	<?php $news = new WP_Query($arg) ?>
 				<div class="latest-news block color-blue">
 					<h3 class="block-title"><span><?php echo pll__('News') ?></span></h3>
-					<div id="latest-news-slide" class="owl-carousel owl-theme latest-news-slide">
-						<?php $count_nuclear = 0 ?>
-						<?php while ( $news->have_posts() ) : $news->the_post(); ?>
-						<?php if ( $count_nuclear % 2 == 0 ) : ?>	
-						<div class="item">
-						<?php endif ?>	
-							<ul class="list-post">
-								<li class="clearfix">
-									<div class="post-block-style clearfix">
-										<div class="post-thumb">
-											<a href="<?php the_permalink(); ?>"><img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" /></a>
-										</div>
-										<!-- <a class="post-cat" href="#">Health</a> -->
-										<div class="post-content">
-								 			<h2 class="post-title title-medium limit-excerpt">
-								 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 53, '...' ); ?></a>
-								 			</h2>
-								 			<div class="post-meta">
-								 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
-								 				<?php $post_date = get_the_date( 'l F j, Y' ) ?>
-								 				<span class="post-date"><?php echo $post_date ?></span>
-								 			</div>
-							 			</div><!-- Post content end -->
-									</div><!-- Post Block style end -->
-								</li><!-- Li end -->
 
-							</ul>	
-								<?php if ( $count_nuclear % 2 == 0 ) : ?>
-									<div class="gap-30"></div>
-								<?php endif ?>	
-								
-						<?php if ( $count_nuclear % 2 != 0 ) : ?>
-						</div>
-						<?php endif ?>
-						<?php $count_nuclear++ ?>
+					<div class="row">
+						<?php while ( $news->have_posts() ) : $news->the_post(); ?>
+						<div class="col-md-4">
+							<div class="post-block-style post-grid clearfix">
+								<div class="post-thumb">
+									<a href="<?php the_permalink(); ?>">
+										<img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" />
+									</a>
+								</div>
+								<?php 
+									$category = get_the_category( get_the_ID() ); 
+								?>
+								<a class="post-cat" href="#"><?php echo pll__( $category[0]->cat_name ); ?></a>
+								<div class="post-content">
+						 			<h2 class="post-title title-small limit-excerpt">
+						 				<a href="#"><?php echo wp_html_excerpt( get_the_title(), 53, '...' ); ?></a>
+						 			</h2>
+						 			<div class="post-meta">
+						 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
+						 				<?php $post_date = get_the_date( 'l F j, Y' ) ?>
+								 		<span class="post-date"><?php echo $post_date ?></span>
+						 				<!-- <span class="post-comment pull-right"><i class="fa fa-comments-o"></i>
+										<a href="#" class="comments-link"><span>03</span></a></span> -->
+						 			</div>
+						 			
+					 			</div><!-- Post content end -->
+							</div><!-- Post Block style end -->
+						</div><!-- Col 1 end -->
 						<?php endwhile; ?>
-						<?php if ( $count_nuclear % 2 != 0 ) : ?>
-						</div>
-						<?php endif ?>
-					</div><!-- Latest News owl carousel end-->
+					</div>
+
+					
+
 				</div><!--- Latest news end -->
 
 
