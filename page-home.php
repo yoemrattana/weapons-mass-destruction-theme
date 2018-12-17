@@ -127,7 +127,7 @@ get_header();
 								</div><!-- Post block style end -->
 							</li><!-- Li 1 end -->
 						<?php endwhile ?>	
-						<div class="gap-10"></div>
+
 						</ul><!-- List post end -->
 					</div><!-- List post block end -->
 				</div><!-- Col 1 end -->
@@ -191,7 +191,7 @@ get_header();
 						$j = 0;
 					?>
 					<?php if ( count($images)) : ?>
-						<div class="row" style="padding-left: 16px;padding-right: 16px;">
+						<div class="row" style="padding-left: 16px;padding-right: 16px; padding-bottom: 16px">
 						<?php foreach ( $images as $image ) : ?>
 							<?php if ($j == 6) continue; ?>
 							<div class="col-md-4" style="padding: 0">
