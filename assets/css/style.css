@@ -2483,7 +2483,7 @@ ul.navbar-nav>li.mega-dropdown {
 
 .post-grid {
    margin-bottom: 15px;
-   min-height: 455px;
+   /*min-height: 455px;*/
 }
 
 /* Post list */
