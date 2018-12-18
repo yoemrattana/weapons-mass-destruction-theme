@@ -86,10 +86,10 @@ $lang = get_bloginfo("language");
 							<a  title="Facebook" href="https://web.facebook.com/NACWCambodia/">
 								<span class="social-icon"><i class="fa fa-facebook-square" style="color:blue"></i></span>
 							</a>
-							<!-- <a title="Twitter" href="#">
-								<span class="social-icon"><i class="fa fa-twitter"></i></span>
+							 <a title="telegram" href="#">
+								<span class="social-icon"><i class="fa fa-telegram" style="color:blue"></i></span>
 							</a>
-							<a title="Google+" href="#">
+							<!--<a title="Google+" href="#">
 								<span class="social-icon"><i class="fa fa-google-plus"></i></span>
 							</a>
 							<a title="Linkdin" href="#">
@@ -143,7 +143,7 @@ $lang = get_bloginfo("language");
 						<!-- End of Navbar toggler -->
 
 						<div id="navbarSupportedContent" class="collapse navbar-collapse navbar-responsive-collapse">
-							<ul class="nav navbar-nav" style="font-family: 'Odor Mean Chey', cursive;">
+							<ul class="nav navbar-nav" style="font-family: 'Odor Mean Chey', ubuntu;">
 								<?php if ( $lang == 'km' ) : ?>
 									<li>
 										<a class="nav-name" href="<?php echo home_url( '/' ) ?>"><?php echo pll__("Home") ?></a>
