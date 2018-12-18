@@ -506,7 +506,7 @@ a[href^=tel] {
 
 .block-title {
    /*font-family: "Hanuman",  "Noto Serif";*/
-   font-family: 'Angkor', cursive;
+   font-family: 'Angkor', ubuntu;
    font-size: 14px;
    line-height: 100%;
    text-transform: uppercase;
