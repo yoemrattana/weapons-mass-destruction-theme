@@ -3118,9 +3118,9 @@ li.active-cat-photo>a{
 
 @media (max-width: 414px) {
    .post-block-style .post-content p {
-    font-size: 14px;
-    word-spacing: 2px;
-    border-block-end: 1px solid #bdc3c7;
-    padding-bottom: 10px;
-}
+       font-size: 14px;
+       word-spacing: 2px;
+       border-block-end: 1px solid #bdc3c7;
+       padding-bottom: 10px;
+   }
 }
