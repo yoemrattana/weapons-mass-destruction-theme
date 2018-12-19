@@ -1299,7 +1299,7 @@ ul.top-info-box>li.nav-search i {
    padding: 0;
    border-radius: 0;
    margin-right: 5px;
-   background: #ec0000;
+   background: #1e88e5;
    height: 30px;
    width: 35px;
    /*z-index: 999;
@@ -3055,7 +3055,7 @@ li.active-cat-photo>a{
 }
 
 .post-title-widget {
-   font-size: 12px;
+   font-size: 16px;
    font-weight: normal;
    font-family: "Hanuman",  "Noto Serif";
    /*line-height: 24px;

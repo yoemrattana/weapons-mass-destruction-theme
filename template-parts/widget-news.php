@@ -16,7 +16,6 @@ $news = new WP_Query($arg);
 
 ?>
 
-
 <div class="widget color-default">
 	<h3 class="block-title"><span><?php echo pll__('Latest') ?></span></h3>
 	<div class="list-post-block">
@@ -30,12 +29,13 @@ $news = new WP_Query($arg);
 							</a>
 						</div><!-- Post thumb end -->
 						<div class="post-content">
-				 			<h2 class="post-title limit-excerpt">
-				 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 100, '...' ); ?></a>
+				 			<h2 class="post-title">
+				 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 70, '...' ); ?></a>
 				 			</h2>								 			
 			 			</div><!-- Post content end -->
 					</div><!-- Post block style end -->
 				</li><!-- Li 1 end -->
+				
 			<?php endwhile; ?>
 		</ul><!-- List post end -->
 	</div><!-- List post block end -->
