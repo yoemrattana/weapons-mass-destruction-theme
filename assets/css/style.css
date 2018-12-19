@@ -571,10 +571,11 @@ a[href^=tel] {
 }
 
 .post-title.title-small {
-   font-size: 14px;
-   line-height: 20px;
+   font-size: 19px;
+   line-height: 27px;
    margin-top: 15px;
    margin-bottom: 5px;
+   word-spacing: 2px;
 }
 
 /*-- Post meta --*/
@@ -779,7 +780,8 @@ span.post-comment span {
 }
 
 .post-block-style .post-content p {
-   font-size: 13px;
+   font-size: 14px;
+   word-spacing: 2px;
 }
 
 .post-block-style .post-cat {
@@ -1333,10 +1335,11 @@ ul.navbar-nav>li {
 }
 
 ul.navbar-nav>li>a {
+   font-family: 'Odor Mean Chey', ubuntu;
    display: inline-block;
    padding: 0 15px;
    line-height: 50px;
-   font-size: 14px;
+   font-size: 1.2em;
    font-weight: 700;
    text-transform: uppercase;
    color: #1c1c1c;
@@ -2370,7 +2373,7 @@ ul.navbar-nav>li.mega-dropdown {
 /*-- Copyright --*/
 
 .copyright {
-   background: #ec0000;
+   background: #1e88e5;
    color: #fff;
    padding: 15px 0;
    position: relative;
@@ -3092,12 +3095,13 @@ li.active-cat-photo>a{
 
 }
 
-/*.flex-control-paging li a.flex-active {
-   color: blue;
-}*/
 @media (max-width: 375px) {
    #header {
       padding-bottom: 0;
+   }
+
+   ul.navbar-nav > li > a {
+      font-size: 14px;
    }
    /*.logo img {
       height: 82px;      
@@ -3111,3 +3115,4 @@ li.active-cat-photo>a{
 .color-blue .post-cat:before {
     border-top: 8px solid #3B5998;
 }
+

@@ -28,7 +28,7 @@ $lang = get_bloginfo("language");
 	<!-- Responsive styles-->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/responsive.css">
 	<!-- FontAwesome -->
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/font-awesome/css/font-awesome.min.css">
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/owl.theme.default.min.css">
@@ -84,10 +84,10 @@ $lang = get_bloginfo("language");
 					<ul class="unstyled">
 						<li>
 							<a  title="Facebook" href="https://web.facebook.com/NACWCambodia/">
-								<span class="social-icon"><i class="fa fa-facebook-square" style="color:blue"></i></span>
+								<span class="social-icon"><i class="fa fa-facebook-square" style="color:#1e88e5"></i></span>
 							</a>
-							 <a title="telegram" href="#">
-								<span class="social-icon"><i class="fa fa-telegram" style="color:blue"></i></span>
+							<a title="Telegram" href="0889989899">
+								<span class="social-icon"><i class="fa fa-telegram" style="color:#1e88e5"></i></span>
 							</a>
 							<!--<a title="Google+" href="#">
 								<span class="social-icon"><i class="fa fa-google-plus"></i></span>
@@ -143,7 +143,7 @@ $lang = get_bloginfo("language");
 						<!-- End of Navbar toggler -->
 
 						<div id="navbarSupportedContent" class="collapse navbar-collapse navbar-responsive-collapse">
-							<ul class="nav navbar-nav" style="font-family: 'Odor Mean Chey', ubuntu;">
+							<ul class="nav navbar-nav">
 								<?php if ( $lang == 'km' ) : ?>
 									<li>
 										<a class="nav-name" href="<?php echo home_url( '/' ) ?>"><?php echo pll__("Home") ?></a>
