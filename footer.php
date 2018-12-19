@@ -21,6 +21,9 @@
 								<a title="Facebook" href="https://web.facebook.com/NACWCambodia/" target="_blank">
 									<span class="social-icon"><i class="fa fa-facebook-square" style="color:#1e88e5"></i></span>
 								</a>
+								<a title="Telegram" href="0889989899">
+									<span class="social-icon"><i class="fa fa-telegram" style="color:#1e88e5"></i></span>
+								</a>
 								<!-- <a title="Twitter" href="#">
 									<span class="social-icon"><i class="fa fa-twitter"></i></span>
 								</a>
