@@ -46,6 +46,8 @@ $lang = get_bloginfo("language");
 	
 	<link rel='stylesheet' href='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/themes/default/ug-theme-default.css' type='text/css' />
 
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/offcanvas.css">
+
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -251,12 +253,141 @@ $lang = get_bloginfo("language");
 					<span id="search"><i class="fa fa-search"></i></span>
 				</div> -->
 
+
 				<div class="search-block" style="display: none;">
 					<input type="text" class="form-control" placeholder="Type what you want and enter">
 					<span class="search-close">&times;</span>
 				</div><!-- Site search end -->
-
 			</div><!--/ Row end -->
 		</div><!--/ Container end -->
 
 	</div><!-- Menu wrapper end -->
+
+	<div class="main-nav-mb clearfix">
+		<div class="container">
+			<div class="row">
+				<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+					<a class="navbar-brand mr-auto mr-lg-0" href="#">អាជ្ញាធរជាតិអាវុធគីមី</a>
+					<button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+
+						<ul class="nav navbar-nav">
+							<?php if ( $lang == 'km' ) : ?>
+								<li>
+									<a class="nav-name" href="<?php echo home_url( '/' ) ?>"><?php echo pll__("Home") ?></a>
+								</li>
+								<li class="nav-item dropdown">
+									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__("News") ?> <i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="<?php echo home_url( '/news' ) ?>"><?php echo pll__( 'All' ) ?></a></li>
+										<li><a href="<?php echo home_url( '/national-news' ) ?>"><?php echo pll__( 'National' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/international-news' ) ?>"><?php echo pll__( 'International' ) ?></a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="<?php echo site_url( '/events' ) ?>"><?php echo pll__("Event") ?></a>
+								</li>
+								<li class="nav-item dropdown">
+									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'Media' ) ?> <i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu" role="menu">
+										<li ><a href="<?php echo home_url( '/photos' ) ?>"><?php echo pll__( 'Photo' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/videos' ) ?>"><?php echo pll__( 'Videos' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/presses-release' ) ?>"><?php echo pll__( 'Press Release' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/publications' ) ?>"><?php echo pll__( 'Publication' ) ?></a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'About' ) ?> <i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu" role="menu">
+										<li ><a href="<?php echo home_url( '/about' ) ?>"><?php echo pll__( 'About' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/organization' ) ?>"><?php echo pll__( 'Organization' ) ?></a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="<?php echo home_url( '/mission-vision' ) ?>"><?php echo pll__("Mission/Vision") ?></a>
+								</li>
+								<li class="nav-item dropdown">
+									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'Weapon of Mass Destruction' ) ?> <i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu" role="menu">
+										<li ><a href="<?php echo home_url( '/weapon-of-mass-destruction' ) ?>"><?php echo pll__( 'Weapon of Mass Destruction' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/nuclear-weapons' ) ?>"><?php echo pll__( 'Nuclear' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/missile' ) ?>"><?php echo pll__( 'Missile' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/chemical' ) ?>"><?php echo pll__( 'Chemical' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/biological' ) ?>"><?php echo pll__( 'Biological' ) ?></a></li>
+									</ul>
+								</li>
+								<li>
+									<a class="nav-name" href="<?php echo home_url( '/contact' ) ?>"><?php echo pll__("Contact") ?></a>
+								</li>
+								<?php else : ?>
+									<li>
+										<a class="nav-name" href="<?php echo site_url( '/home-en' ) ?>"><?php echo pll__("Home") ?></a>
+									</li>
+									<li class="nav-item dropdown">
+										<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__("News") ?> <i class="fa fa-angle-down"></i></a>
+										<ul class="dropdown-menu" role="menu">
+											<li><a href="<?php echo site_url( '/news-en' ) ?>"><?php echo pll__( 'All' ) ?></a></li>
+											<li><a href="<?php echo site_url( '/national-news-en' ) ?>"><?php echo pll__( 'National' ) ?></a></li>
+											<li ><a href="<?php echo site_url( '/international-news-en' ) ?>"><?php echo pll__( 'International' ) ?></a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="<?php echo site_url( '/events-en' ) ?>"><?php echo pll__("Event") ?></a>
+									</li>
+									<li class="nav-item dropdown">
+										<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'Media' ) ?> <i class="fa fa-angle-down"></i></a>
+										<ul class="dropdown-menu" role="menu">
+											<li ><a href="<?php echo site_url( '/photos-en' ) ?>"><?php echo pll__( 'Photo' ) ?></a></li>
+											<li ><a href="<?php echo site_url( '/videos-en' ) ?>"><?php echo pll__( 'Videos' ) ?></a></li>
+											<li ><a href="<?php echo site_url( '/presses-release-en' ) ?>"><?php echo pll__( 'Press Release' ) ?></a></li>
+											<li ><a href="<?php echo site_url( '/publications-en' ) ?>"><?php echo pll__( 'Publication' ) ?></a></li>
+										</ul>
+									</li>
+									<li class="nav-item dropdown">
+										<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'About' ) ?> <i class="fa fa-angle-down"></i></a>
+										<ul class="dropdown-menu" role="menu">
+											<li ><a href="<?php echo site_url( '/about-en' ) ?>"><?php echo pll__( 'About' ) ?></a></li>
+											<li ><a href="<?php echo site_url( '/organization-en' ) ?>"><?php echo pll__( 'Organization' ) ?></a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="<?php echo site_url( '/mission-vision-en' ) ?>"><?php echo pll__("Mission/Vision") ?></a>
+									</li>
+									<li class="nav-item dropdown">
+										<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'Weapon of Mass Destruction' ) ?> <i class="fa fa-angle-down"></i></a>
+										<ul class="dropdown-menu" role="menu">
+											<li ><a href="<?php echo site_url( '/weapon-of-mass-destruction-en' ) ?>"><?php echo pll__( 'Weapon of Mass Destruction' ) ?></a></li>
+											<li ><a href="<?php echo site_url( '/nuclear-weapons-en' ) ?>"><?php echo pll__( 'Nuclear' ) ?></a></li>
+											<li ><a href="<?php echo site_url( '/missile-en' ) ?>"><?php echo pll__( 'Missile' ) ?></a></li>
+											<li ><a href="<?php echo site_url( '/chemical-en' ) ?>"><?php echo pll__( 'Chemical' ) ?></a></li>
+											<li ><a href="<?php echo site_url( '/biological-en' ) ?>"><?php echo pll__( 'Biological' ) ?></a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="nav-name" href="<?php echo site_url( '/contact-en' ) ?>"><?php echo pll__("Contact") ?></a>
+									</li>
+
+								<?php endif; ?>
+								<!-- Features menu end -->
+							</ul><!--/ Nav ul end -->
+							<ul class="unstyled top-nav">
+								<?php
+									wp_nav_menu( array(
+										'theme_location'  => 'primary',
+										'container'       => '',
+										'items_wrap' 		=> '<li id="" class="">%3$s</li>'
+										//'container'       => 'nav navbar-nav',
+										//'container_class' => 'navbar-collapse collapse',
+										//'menu_class'      => 'nav navbar-nav'
+									))
+								?>
+								
+							</ul>
+						</div>
+					</nav>	
+				</div>
+			</div>
+	</div>	

@@ -99,6 +99,9 @@
 <?php endif ?>
 <script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/themes/tiles/ug-theme-tiles.js'></script>
 
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/assets/js/holder.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/assets/js/offcanvas.js"></script>
+
 <?php wp_footer(); ?>
 </div> <!-- end inner-body-->
 
