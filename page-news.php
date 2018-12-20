@@ -43,8 +43,10 @@
 							 			</h2>
 							 			<div class="post-meta">
 							 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
-							 				<?php $post_date = get_the_date( 'l F j, Y' ) ?>
-								 			<span class="post-date"><?php echo $post_date ?></span>
+							 				<?php $post_date = get_the_date( 'd-m-Y' ) ?>
+								 			<span class="post-date"><i class="fa fa-clock-o"></i><?php echo $post_date ?></span>
+								 			<span class="post-comment pull-right"><i class="fa fa-eye"></i>
+										<a href="#" class="comments-link"><span><?php echo getPostViews(get_the_ID()) ?></span></a></span>
 							 			</div>
 							 			<p><?php echo wp_html_excerpt( get_the_excerpt(), 150, '...' )  ?></p>
 						 			</div><!-- Post content end -->
