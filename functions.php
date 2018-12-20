@@ -364,6 +364,7 @@ function nacw_remove_extra_data_video($data, $post, $context) {
     	$data->data['title'] = $data->data['title']['rendered'] ;
         unset( $data->data['date_gmt'] );
         unset( $data->data['guid']);
+        unset( $data->data['slug']);
         unset( $data->data['type']);
         unset( $data->data['modified']);
         unset( $data->data['modified_gmt']);
@@ -396,6 +397,7 @@ function nacw_remove_extra_data_photo($data, $post, $context) {
     if ($context!== 'view' || is_wp_error ($data)) {
     	$data->data['title'] = $data->data['title']['rendered'] ;
         unset( $data->data['date_gmt'] );
+        unset( $data->data['slug']);
         unset( $data->data['guid']);
         unset( $data->data['type']);
         unset( $data->data['modified']);
