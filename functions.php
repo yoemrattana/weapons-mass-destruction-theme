@@ -391,6 +391,46 @@ function nacw_remove_extra_data_video($data, $post, $context) {
 }
 add_filter ('rest_prepare_video' ,'nacw_remove_extra_data_video', 12, 3);
 
+function nacw_remove_extra_data_photo($data, $post, $context) {
+    // We only want to modify the 'view' context, for reading posts 
+    if ($context!== 'view' || is_wp_error ($data)) {
+    	$data->data['title'] = $data->data['title']['rendered'] ;
+        unset( $data->data['date_gmt'] );
+        unset( $data->data['guid']);
+        unset( $data->data['type']);
+        unset( $data->data['modified']);
+        unset( $data->data['modified_gmt']);
+        unset( $data->data['status']);
+        unset( $data->data['excerpt']);
+        unset( $data->data['template']);
+        unset( $data->data['link']);
+        $images = acf_photo_gallery( 'photo_gallery', $post->ID );
+
+			$full_image_url = [];
+	        foreach ( $images as $image) {
+	        	$full_image_url[] = $image['full_image_url'];
+	        }
+
+		$data->data['photo_gallery'] = $full_image_url;
+
+        unset( $data->data['acf']);
+        unset( $data->data['links']);
+
+        $data->remove_link( 'collection' );
+	    $data->remove_link( 'self' );
+	    $data->remove_link( 'about' );
+	    $data->remove_link( 'author' );
+	    $data->remove_link( 'replies' );
+	    $data->remove_link( 'version-history' );
+	    $data->remove_link( 'https://api.w.org/featuredmedia' );
+	    $data->remove_link( 'https://api.w.org/attachment' );
+	    $data->remove_link( 'https://api.w.org/term' );
+	    $data->remove_link( 'curies' );
+        return $data; 
+     }
+}
+add_filter ('rest_prepare_photo' ,'nacw_remove_extra_data_photo', 12, 3);
+
 function utf8_urldecode($str) {
     $str = preg_replace("/%u([0-9a-f]{3,4})/i","&#x\\1;",urldecode($str));
     return html_entity_decode($str,null,'UTF-8');;
