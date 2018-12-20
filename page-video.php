@@ -38,7 +38,7 @@
 							   	</div><!-- Post thumb end -->
 								<div class="post-content">
 						 			<h2 class="post-title title-small">
-						 				<a class="popup" href="https://www.youtube.com/embed/<?php the_field( 'video' ) ?>?autoplay=1&amp;loop=1"><?php the_title() ?></a>
+						 				<a class="popup" href="https://www.youtube.com/embed/<?php the_field( 'video' ) ?>?autoplay=1&amp;loop=1"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ) ?></a>
 						 			</h2>
 					 			</div><!-- Post content end -->
 							</div><!-- Post Block style end -->
