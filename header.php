@@ -277,7 +277,7 @@ $lang = get_bloginfo("language");
 						<ul class="nav navbar-nav">
 							<?php if ( $lang == 'km' ) : ?>
 								<li>
-									<a class="nav-name" href="<?php echo home_url( '/' ) ?>"><?php echo pll__("Home") ?></a>
+									<a class="nav-name" href="<?php echo home_url( '/' ) ?>">ទំព័រដើម</a>
 								</li>
 								<li class="nav-item dropdown">
 									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__("News") ?> <i class="fa fa-angle-down"></i></a>
@@ -300,9 +300,9 @@ $lang = get_bloginfo("language");
 									</ul>
 								</li>
 								<li class="nav-item dropdown">
-									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'About' ) ?> <i class="fa fa-angle-down"></i></a>
+									<a href="#" class="nav-link" data-toggle="dropdown">អំពីយើង <i class="fa fa-angle-down"></i></a>
 									<ul class="dropdown-menu" role="menu">
-										<li ><a href="<?php echo home_url( '/about' ) ?>"><?php echo pll__( 'About' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/about' ) ?>">អំពីយើង</a></li>
 										<li ><a href="<?php echo home_url( '/organization' ) ?>"><?php echo pll__( 'Organization' ) ?></a></li>
 									</ul>
 								</li>
@@ -310,9 +310,9 @@ $lang = get_bloginfo("language");
 									<a href="<?php echo home_url( '/mission-vision' ) ?>"><?php echo pll__("Mission/Vision") ?></a>
 								</li>
 								<li class="nav-item dropdown">
-									<a href="#" class="nav-link" data-toggle="dropdown"><?php echo pll__( 'Weapon of Mass Destruction' ) ?> <i class="fa fa-angle-down"></i></a>
+									<a href="#" class="nav-link" data-toggle="dropdown">អាវុធប្រល័យលោក <i class="fa fa-angle-down"></i></a>
 									<ul class="dropdown-menu" role="menu">
-										<li ><a href="<?php echo home_url( '/weapon-of-mass-destruction' ) ?>"><?php echo pll__( 'Weapon of Mass Destruction' ) ?></a></li>
+										<li ><a href="<?php echo home_url( '/weapon-of-mass-destruction' ) ?>">អាវុធប្រល័យលោក</a></li>
 										<li ><a href="<?php echo home_url( '/nuclear-weapons' ) ?>"><?php echo pll__( 'Nuclear' ) ?></a></li>
 										<li ><a href="<?php echo home_url( '/missile' ) ?>"><?php echo pll__( 'Missile' ) ?></a></li>
 										<li ><a href="<?php echo home_url( '/chemical' ) ?>"><?php echo pll__( 'Chemical' ) ?></a></li>
