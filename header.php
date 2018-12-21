@@ -114,14 +114,16 @@ $lang = get_bloginfo("language");
 	<header id="header" class="header">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-sm-12">
+				<div class="col-md-12 col-sm-12">
 					<div class="logo">
 						<a href="<?php echo home_url( '/' ) ?>">
-							<!-- <img src="images/logos/logo.png" alt=""> -->
-							<!-- <img src="https://front.un-arm.org/img/unoda-en.png"> -->
-							<img src="<?php bloginfo('stylesheet_directory');?>/assets/images/logos/logo.png">
+							<img src="<?php bloginfo('stylesheet_directory');?>/assets/images/logos/logo-no-title.png" width=130>
+							<div class="logo-title">
+								<h1>អាជ្ញាធរជាតិអាវុធគីមី</h1>
+							</div>
 						</a>
 					</div>
+
 				</div><!-- logo col end -->
 
 				<!--  <div class="col-md-9 col-sm-12 header-right">
