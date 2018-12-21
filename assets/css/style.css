@@ -2486,7 +2486,7 @@ ul.navbar-nav>li.mega-dropdown {
 /* Post grid */
 
 .post-grid {
-   margin-bottom: 20px;
+   margin-bottom: 25px;
    /*min-height: 455px;*/
 }
 
@@ -3127,6 +3127,7 @@ li.active-cat-photo>a{
        word-spacing: 2px;
        border-block-end: 1px solid #bdc3c7;
        padding-bottom: 10px;
+       line-height: 27px;
    }
 
    .main-nav {
@@ -3152,6 +3153,14 @@ li.active-cat-photo>a{
 
    #header {
       padding-bottom: 0;
+   }
+
+   .post-title.title-small {
+       font-size: 24px;
+       line-height: 35px;
+       margin-top: 15px;
+       margin-bottom: 5px;
+       word-spacing: 2px;
    }
 
 }
