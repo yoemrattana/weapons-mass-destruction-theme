@@ -1299,7 +1299,7 @@ ul.top-info-box>li.nav-search i {
    padding: 0;
    border-radius: 0;
    margin-right: 5px;
-   background: #1e88e5;
+   background: #e74c3c;
    height: 30px;
    width: 35px;
    /*z-index: 999;
@@ -1335,11 +1335,12 @@ ul.navbar-nav>li {
 }
 
 ul.navbar-nav>li>a {
-   font-family: 'Odor Mean Chey', ubuntu;
+  /* font-family: 'Odor Mean Chey', ubuntu;*/
+   font-family: 'Hanuman', ubuntu;
    display: inline-block;
    padding: 0 15px;
    line-height: 50px;
-   font-size: 1.2em;
+   font-size: 1.4em;
    font-weight: 700;
    text-transform: uppercase;
    color: #1c1c1c;
@@ -3159,4 +3160,8 @@ li.active-cat-photo>a{
    .main-nav-mb {
       display: none;
    }
+}
+
+.bg-blue {
+   background-color: #3498db !important;
 }

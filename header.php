@@ -124,11 +124,11 @@ $lang = get_bloginfo("language");
 					</div>
 				</div><!-- logo col end -->
 
-				<!-- <div class="col-md-9 col-sm-12 header-right">
+				<!--  <div class="col-md-9 col-sm-12 header-right">
 					<div class="ad-banner float-right">
 						<a href="#"><img src="images/banner-ads/ad-top-header.png" class="img-fluid" alt=""></a>
 					</div>
-				</div> -->
+				</div>-->
 				<!-- header right end -->
 			</div><!-- Row end -->
 		</div><!-- Logo and banner area end -->
@@ -266,7 +266,7 @@ $lang = get_bloginfo("language");
 	<div class="main-nav-mb clearfix">
 		<div class="container">
 			<div class="row">
-				<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+				<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-blue">
 					<a class="navbar-brand mr-auto mr-lg-0" href="#">អាជ្ញាធរជាតិអាវុធគីមី</a>
 					<button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
 						<span class="navbar-toggler-icon"></span>
