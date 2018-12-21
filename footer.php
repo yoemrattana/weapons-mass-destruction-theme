@@ -8,45 +8,26 @@
 				<div class="col-md-12">
 					<div class="footer-info-content">
 						<div class="footer-logo">
-							<img class="img-fluid" src="<?php bloginfo('stylesheet_directory');?>/assets/images/logos/logo.png" alt="logo"  />
+							<img class="img-fluid" src="<?php bloginfo('stylesheet_directory');?>/assets/images/logos/logo-no-title.png" alt="logo" width=130px  />
 						</div>
 						<h5 class="organization-title">អាជ្ញាធរជាតិអាវុធគីមី</h5>
-						<p class="footer-info-phone"><i class="fa fa-phone"></i> <?php echo get_field( 'phone', 165 ) ?></p>
-						<p class="footer-info-email"><i class="fa fa-envelope-o"></i> <?php echo get_field( 'email', 165 ) ?></p>
+						<!-- <p class="footer-info-phone"><i class="fa fa-phone"></i> <?php echo get_field( 'phone', 165 ) ?></p>
+						<p class="footer-info-email"><i class="fa fa-envelope-o"></i> <?php echo get_field( 'email', 165 ) ?></p> -->
 						<ul class="unstyled footer-social">
 							<li>
-								<!-- <a title="Rss" href="#">
-									<span class="social-icon"><i class="fa fa-rss"></i></span>
-								</a> -->
 								<a title="Facebook" href="https://web.facebook.com/NACWCambodia/" target="_blank">
 									<span class="social-icon"><i class="fa fa-facebook-square" style="color:#1e88e5"></i></span>
 								</a>
 								<a title="Telegram" href="0889989899">
 									<span class="social-icon"><i class="fa fa-telegram" style="color:#1e88e5"></i></span>
 								</a>
-								<!-- <a title="Twitter" href="#">
-									<span class="social-icon"><i class="fa fa-twitter"></i></span>
-								</a>
-								<a title="Google+" href="#">
-									<span class="social-icon"><i class="fa fa-google-plus"></i></span>
-								</a> -->
-								<!-- <a title="Linkdin" href="#">
-									<span class="social-icon"><i class="fa fa-linkedin"></i></span>
-								</a>
-								<a title="Skype" href="#">
-									<span class="social-icon"><i class="fa fa-skype"></i></span>
-								</a>
-								<a title="Skype" href="#">
-									<span class="social-icon"><i class="fa fa-dribbble"></i></span>
-								</a>
-								<a title="Skype" href="#">
-									<span class="social-icon"><i class="fa fa-pinterest"></i></span>
-								</a>
-								<a title="Skype" href="#">
-									<span class="social-icon"><i class="fa fa-instagram"></i></span>
-								</a> -->
 							</li>
 						</ul>
+						<div class="footer-contact">
+							<p class="title-contact">ទំនាក់ទំនង</p>
+							<p>gmail@gmail.com</p>
+							<p>0998765467</p>
+						</div>
 					</div><!-- Footer info content end -->
 				</div><!-- Col end -->
 			</div><!-- Row end -->

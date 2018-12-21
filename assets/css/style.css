@@ -3084,10 +3084,10 @@ li.active-cat-photo>a{
 }
 
 .organization-title {
-   font-family: 'Moul', cursive;
-   font-size: 15px;
+   font-family: 'Angkor', cursive;
+   font-size: 21px;
    margin-top: 10px;
-   color: white;
+   color: #969696;
 }
 
 .post-block-style.post-float-half .post-thumb-small img {
@@ -3163,6 +3163,10 @@ li.active-cat-photo>a{
        word-spacing: 2px;
    }
 
+   .footer{
+      padding: 0 0 35px 0;
+   }
+
 }
 
 @media (min-width: 415px){
@@ -3173,4 +3177,17 @@ li.active-cat-photo>a{
 
 .bg-blue {
    background-color: #3498db !important;
+}
+
+.footer-contact{
+   margin-top: 15px;
+}
+
+.footer-contact p{
+   font-size: 14px;
+}
+
+.footer-contact p.title-contact {
+   font-size: 17px;
+   font-weight: 700;
 }
