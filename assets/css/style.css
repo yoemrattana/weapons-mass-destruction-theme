@@ -819,7 +819,7 @@ span.post-comment span {
 }
 
 .list-post-block .list-post>li {
-   margin-bottom: 30px;
+   margin-bottom: 40px;
    max-height: 75px;
 }
 
@@ -3167,6 +3167,14 @@ li.active-cat-photo>a{
    .post-title.title-small {
        font-size: 24px;
        line-height: 35px;
+       margin-top: 15px;
+       margin-bottom: 5px;
+       word-spacing: 2px;
+   }
+
+   .press-content .post-title.title-small {
+       font-size: 14px;
+       line-height: 20px;
        margin-top: 15px;
        margin-bottom: 5px;
        word-spacing: 2px;

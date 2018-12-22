@@ -64,15 +64,8 @@ get_header();
 						<?php endwhile; ?>
 					</div>
 
-					
-
 				</div><!--- Latest news end -->
-
-
-
 				<div class="gap-10"></div>
-
-				
 			</div><!-- Content Col end -->
 
 			<!-- Sidebar -->
@@ -116,7 +109,7 @@ get_header();
 										<a class="post-cat" href="#"><?php echo pll__( 'Press Release' ) ?></a>
 									</div><!-- Post thumb end -->
 
-									<div class="post-content">
+									<div class="post-content press-content">
 							 			<h2 class="post-title title-small">
 							 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ) ?> </a>
 							 			</h2>
@@ -128,7 +121,6 @@ get_header();
 								</div><!-- Post block style end -->
 							</li><!-- Li 1 end -->
 						<?php endwhile ?>	
-
 						</ul><!-- List post end -->
 					</div><!-- List post block end -->
 				</div><!-- Col 1 end -->
@@ -154,7 +146,7 @@ get_header();
 										<a class="post-cat" href="#"><?php echo pll__( 'Publication' ) ?></a>
 									</div><!-- Post thumb end -->
 
-									<div class="post-content">
+									<div class="post-content press-content">
 							 			<h2 class="post-title title-small">
 							 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ) ?> </a>
 							 			</h2>
