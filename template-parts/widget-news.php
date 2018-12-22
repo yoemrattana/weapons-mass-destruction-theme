@@ -16,7 +16,7 @@ $news = new WP_Query($arg);
 
 ?>
 
-<div class="widget color-default">
+<div class="widget color-blue">
 	<h3 class="block-title"><span><?php echo pll__('Latest') ?></span></h3>
 	<div class="list-post-block">
 		<ul class="list-post review-post-list">

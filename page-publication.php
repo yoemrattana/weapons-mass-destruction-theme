@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-12">
-				<div class="more-news block color-default">
+				<div class="more-news block color-blue">
 					<h3 class="block-title">
 						<span><?php echo pll__('Publication') ?></span>
 					</h3>
@@ -58,7 +58,7 @@
 										</a>
 									</div><!-- Post thumb end -->
 									<div class="post-content">
-							 			<h2 class="post-title limit-excerpt" style="font-size: 14px">
+							 			<h2 class="post-title" style="font-size: 14px">
 							 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 100, '...' ); ?></a>
 							 			</h2>								 			
 						 			</div><!-- Post content end -->

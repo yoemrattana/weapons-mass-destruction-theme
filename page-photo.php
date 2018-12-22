@@ -22,7 +22,7 @@ $photos = new WP_Query($arg);
 
 			<div class="col-lg-4 col-sm-12">
 				<div class="sidebar sidebar-right">
-					<div class="widget color-default">
+					<div class="widget color-blue">
 						<h3 class="block-title"><span><?php echo pll__('Category') ?></span></h3>
 						<div class="card">
 							<div class="body-card">
@@ -41,7 +41,7 @@ $photos = new WP_Query($arg);
 			</div><!-- Sidebar col end -->
 
 			<div class="col-lg-8 col-md-12">
-				<div class="more-news block color-default">
+				<div class="more-news block color-blue">
 					<h3 class="block-title">
 						<span><?php echo pll__('Photos') ?></span>
 					</h3>

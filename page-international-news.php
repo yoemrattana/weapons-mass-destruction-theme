@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-12">
-				<div class="more-news block color-default">
+				<div class="more-news block color-blue">
 					<h3 class="block-title">
 						<span><?php echo pll__('International News') ?></span>
 					</h3>

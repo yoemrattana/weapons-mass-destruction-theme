@@ -1,7 +1,7 @@
 <?php if ( is_page( 'home' ) || is_page( 'home-en' ) ) : ?>
 <div class="widget color-blue">
 <?php else : ?>
-<div class="widget color-default">
+<div class="widget color-blue">
 <?php endif; ?>
 	<h3 class="block-title"><span><?php echo pll__('Event') ?></span></h3>
 
