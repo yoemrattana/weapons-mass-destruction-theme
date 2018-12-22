@@ -278,5 +278,10 @@ jQuery(function($) {
 });
 
 /* ----------------------------------------------------------- */
-/*  Preload
+/*  fotorama
 /* ----------------------------------------------------------- */
+$(function () {
+  $('.fotorama').on('fotorama:startautoplay fotorama:stopautoplay', function (e) {
+    console.log(e.type);
+  });
+});

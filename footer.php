@@ -83,6 +83,9 @@
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/assets/js/holder.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/assets/js/offcanvas.js"></script>
 
+<!-- fotorama -->
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/assets/js/fotorama-4.4.3.min.js"></script>
+
 <?php wp_footer(); ?>
 </div> <!-- end inner-body-->
 
