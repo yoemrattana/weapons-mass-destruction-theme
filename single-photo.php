@@ -45,42 +45,12 @@ $photos = new WP_Query($arg);
 					<h3 class="block-title">
 						<span><?php echo pll__('Photos') ?></span>
 					</h3>
+					<div class="gallery-title">
+						<h3><?php the_title() ?></h3>
+					</div>
 					<div id="more-news-slide" class="owl-carousel1 owl-theme1 more-news-slide1">
             			
-						<?php
-						// $post_ids = get_posts(array(
-						//     'fields'          	=> 'ids',
-						//     'posts_per_page'  	=> -1,
-						//     'post_type' 		=> 'photo'
-						// ));
-						// $tmp = [];
-						// $images = [];
-						// $i = 0;
-						// foreach ( $post_ids as $post_id ) {
-						// 	$tmp[] = acf_photo_gallery( 'photo_gallery', $post_id );
-						// 	$v = [];
-						// 	$v = $tmp;
-						// 	if ($i == 1) {
-						// 		$v = array_merge($tmp[$i-1], $tmp[$i]);
-						// 	} else if ( $i > 1 ) {
-						// 		$v = array_merge($images, $tmp[$i]);
-						// 	}
-						// 	$images = $v;
-						// 	$i++;
-						// }
-
-						// $tmp = array_merge($tmp);
-						
-						//var_dump($images);
-						// $post_id = get_the_ID();
-					 //    //Get the images ids from the post_metadata
-					 //    $images1 = acf_photo_gallery( 'photo_gallery', 108 );
-					 //    $images2 = acf_photo_gallery( 'photo_gallery', 107 );
-					 //    $images3 = acf_photo_gallery( 'photo_gallery', 114 );
-					 //    $images = array_merge($images1, $images2, $images3);
-					    //var_dump($images);
-					    //Check if return array has anything in it
-						
+					<?php
 					    $images = acf_photo_gallery( 'photo_gallery', $single_photo_id );
 					    if( count($images) ):
 					    	echo '<div id="gallery" style="display:none;">';
@@ -99,15 +69,13 @@ $photos = new WP_Query($arg);
 					?>
 						<a href="http://unitegallery.net">
 							<img alt="<?php echo $title ?>"
-							     src="<?php echo $full_image_url ?>"
-							     data-image="<?php echo $full_image_url ?>"
-							     data-description="<?php echo $caption ?>"
-							     style="display:none">
-							</a>
+							    src="<?php echo $full_image_url ?>"
+							    data-image="<?php echo $full_image_url ?>"
+							    data-description="<?php echo $caption ?>"
+							    style="display:none">
+						</a>
 					
-					<?php endforeach; 
-						echo '</div>';
-					endif; ?>
+					<?php endforeach; echo '</div>';endif; ?>
 					
 					</div><!-- More news carousel end -->
 				</div><!--More news block end -->				

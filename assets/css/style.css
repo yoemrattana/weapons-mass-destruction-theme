@@ -3223,3 +3223,8 @@ li.active-cat-photo>a{
       color: #3B5998;
    }
 }
+
+.gallery-title h3{
+   font-family: 'Hanuman', Ubuntu;
+   line-height: 35px;
+}
