@@ -80,7 +80,7 @@ $photos = new WP_Query($arg);
 					    //var_dump($images);
 					    //Check if return array has anything in it
 					    if( count($images) ):
-					    	echo '<div id="gallery-photo" style="display:none;">';
+					    	echo '<div id="gallery" style="display:none;">';
 					        //Cool, we got some data so now let's loop over it
 					        foreach($images as $image):
 					            $id = $image['id']; // The attachment id of the media

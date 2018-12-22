@@ -83,7 +83,7 @@ $photos = new WP_Query($arg);
 						
 					    $images = acf_photo_gallery( 'photo_gallery', $single_photo_id );
 					    if( count($images) ):
-					    	echo '<div id="gallery-photo" style="display:none;">';
+					    	echo '<div id="gallery" style="display:none;">';
 					        //Cool, we got some data so now let's loop over it
 					        foreach($images as $image):
 					            $id = $image['id']; // The attachment id of the media
@@ -110,12 +110,8 @@ $photos = new WP_Query($arg);
 					endif; ?>
 					
 					</div><!-- More news carousel end -->
-				</div><!--More news block end -->
-			
-				
+				</div><!--More news block end -->				
 			</div><!-- Content Col end -->
-
-			
 		</div><!-- Row end -->
 	</div><!-- Container end -->
 </section><!-- 3rd block end -->

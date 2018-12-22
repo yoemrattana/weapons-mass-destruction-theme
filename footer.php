@@ -79,6 +79,9 @@
 
 <!-- fotorama -->
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/assets/js/fotorama-4.4.3.min.js"></script>
+<!-- unitegallery -->
+<script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/js/unitegallery.min.js'></script>	
+<script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/themes/tiles/ug-theme-tiles.js'></script>
 
 <?php wp_footer(); ?>
 </div> <!-- end inner-body-->
@@ -93,6 +96,19 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <!-- facebook widget end -->
+
+<!-- unitegallery -->
+<script type="text/javascript">
+
+	jQuery(document).ready(function(){
+
+		jQuery("#gallery").unitegallery({
+			tiles_type:"justified"
+		});
+
+	});
+	
+</script>
 
 </body>
 </html>
