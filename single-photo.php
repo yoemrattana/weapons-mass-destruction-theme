@@ -4,6 +4,7 @@
  * */
 get_header();
 $single_photo_id = $post->ID;	
+$single_post_title = get_the_title();
  $arg = [
 	'post_type' 		=> 'photo',
 	'orderby' 			=> 'post_id', 
@@ -46,7 +47,7 @@ $photos = new WP_Query($arg);
 						<span><?php echo pll__('Photos') ?></span>
 					</h3>
 					<div class="gallery-title">
-						<h3><?php the_title() ?></h3>
+						<h3><?php echo $single_post_title ?></h3>
 					</div>
 					<div id="more-news-slide" class="owl-carousel1 owl-theme1 more-news-slide1">
             			
