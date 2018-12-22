@@ -10,7 +10,7 @@
 <div class="col-lg-6">
 	<div class="block color-blue">
 		<h3 class="block-title"><span><?php echo pll__('Photo') ?></span></h3>
-		<?php if ( count($images)) : ?>
+		<?php if ( count($images) ) : ?>
 			<div class="row" style="padding-left: 16px;padding-right: 16px; padding-bottom: 16px">
 				<div class="fotorama"
 				    data-autoplay="true"

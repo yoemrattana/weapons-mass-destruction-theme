@@ -34,20 +34,13 @@ $lang = get_bloginfo("language");
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/owl.theme.default.min.css">
 	<!-- Colorbox -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/colorbox.css">
-
+	<!-- font Khmer -->
 	<link href="https://fonts.googleapis.com/css?family=Hanuman" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Moul" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Bokor" rel="stylesheet">
-
 	<link href="https://fonts.googleapis.com/css?family=Angkor|Odor+Mean+Chey" rel="stylesheet">
-	<!-- video gallery plugin -->
-
-	<link rel='stylesheet' href='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/css/unite-gallery.css' type='text/css' />
-	
-	<link rel='stylesheet' href='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/themes/default/ug-theme-default.css' type='text/css' />
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/offcanvas.css">
-
 	<!-- fotorama -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/fotorama.css">
 
