@@ -3228,3 +3228,8 @@ li.active-cat-photo>a{
    font-family: 'Hanuman', Ubuntu;
    line-height: 35px;
 }
+
+.content-page p{
+   font-size: 17px;
+   line-height: 27px;
+}
