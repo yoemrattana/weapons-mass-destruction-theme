@@ -3051,8 +3051,18 @@ label {
    padding: 10px;
 }
 
+.cat-photo ul li {
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.cat-photo ul >li:not(:last-child){
+   border-bottom: 1px solid rgba(0,0,0,0.15);
+   line-height: 35px;
+}
+
 li.active-cat-photo>a{
-   color: blue;
+   color: #1e88e5;
 }
 
 .post-title-widget {
@@ -3234,13 +3244,3 @@ li.active-cat-photo>a{
    line-height: 27px;
 }
 
-.cat-photo ul li {
-   font-size: 14px;
-   font-weight: 600;
-}
-
-.cat-photo ul >li:not(:last-child){
-   border-bottom: 1px solid rgba(0,0,0,0.15);
-   line-height: 35px;
-   
-}
