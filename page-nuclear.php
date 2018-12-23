@@ -16,11 +16,13 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="content-page">
-								<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-								
-									<?php the_content();?>
+								<div class="content-page">
+									<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 									
-								<?php endwhile; endif; ?>
+										<?php the_content();?>
+										
+									<?php endwhile; endif; ?>
+								</div>
 							</div>
 						</div>
 			      	</div><!-- Post block row end -->
