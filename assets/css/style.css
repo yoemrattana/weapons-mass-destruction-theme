@@ -3233,3 +3233,14 @@ li.active-cat-photo>a{
    font-size: 17px;
    line-height: 27px;
 }
+
+.cat-photo ul li {
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.cat-photo ul >li:not(:last-child){
+   border-bottom: 1px solid rgba(0,0,0,0.15);
+   line-height: 35px;
+   
+}
