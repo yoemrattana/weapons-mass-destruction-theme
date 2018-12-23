@@ -12,7 +12,7 @@
 		<div class="row" style="margin: 0">
 			<div class="fotorama" 
 				data-width="700" 
-				data-ratio="700/426" 
+				data-ratio="3/2" 
 				data-max-width="100%"
 				data-nav="thumbs"
 			>
