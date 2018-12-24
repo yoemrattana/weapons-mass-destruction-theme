@@ -3143,9 +3143,32 @@ li.active-cat-photo>a{
    .post-block-style .post-content p {
        font-size: 14px;
        word-spacing: 2px;
-       border-block-end: 1px solid #bdc3c7;
+       /*border-block-end: 1px solid #bdc3c7;*/
        padding-bottom: 10px;
        line-height: 27px;
+   }
+
+   .post-block-style{
+      -moz-border-radius: 2px;
+       border-radius: 2px;
+       webkit-border-radius: 2px;
+       border: 1px solid #c3ccdf;
+       padding: 7px;
+       background-color: #FFF;
+   }
+
+   .block-item {
+      background-color: #e9ebee;
+      padding-top: 5px;
+   }
+
+   .block-item .col-sm-4{
+      padding: 0;
+   }
+
+   .post-grid {
+      margin-bottom: 9px;
+    /* min-height: 455px; */
    }
 
    .main-nav {
