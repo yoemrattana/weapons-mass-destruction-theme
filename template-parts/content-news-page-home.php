@@ -13,9 +13,8 @@
 				
 				<div class="latest-news block color-blue">
 					<h3 class="block-title"><span><?php echo pll__('News') ?></span></h3>
-
-					<div class="row">
-						<div class="block-item">
+					<div class="block-item">
+						<div class="row">
 							<?php while ( $news->have_posts() ) : $news->the_post(); ?>
 							<div class="col-sm-4">
 								<div class="post-block-style post-grid clearfix">
@@ -45,9 +44,9 @@
 								</div><!-- Post Block style end -->
 							</div><!-- Col 1 end -->
 							<?php endwhile; ?>
-						</div>
-
-					</div> <!-- row end -->
+							
+						</div> <!-- row end -->
+					</div> <!-- block-item end-->
 				</div><!--- Latest news end -->
 				<div class="gap-10"></div>
 			</div><!-- Content Col end -->

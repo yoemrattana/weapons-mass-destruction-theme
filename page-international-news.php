@@ -25,35 +25,34 @@
 							'paged' 			=> $paged ]; 
 						?>
             			<?php $news = new WP_Query($arg) ?>
-            			
-						<?php while ( $news->have_posts() ) : $news->the_post(); ?>
-							<div class="item">							
-								<div class="post-block-style post-float-half clearfix">
-									<div class="post-thumb">
-										<a href="<?php the_permalink(); ?>">
-											<img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" />
-										</a>
-									</div>
-									<a class="post-cat" href="#"><?php echo pll__('International News'); ?></a>
-									<div class="post-content">
-							 			<h2 class="post-title">
-							 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-							 			</h2>
-							 			<div class="post-meta">
-							 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
-							 				<?php $post_date = get_the_date( 'l F j, Y' ) ?>
-								 			<span class="post-date"><?php echo $post_date ?></span>
-							 			</div>
-							 			<p><?php echo wp_html_excerpt( get_the_excerpt(), 150, '...' )  ?></p>
-						 			</div><!-- Post content end -->
-								</div><!-- Post Block style 1 end -->
-
-								<div class="gap-20"></div>
-
+            			<div class="block-item">
+							<div class="row">
+								<?php while ( $news->have_posts() ) : $news->the_post(); ?>
+									<div class="item">							
+										<div class="post-block-style post-float-half clearfix">
+											<div class="post-thumb">
+												<a href="<?php the_permalink(); ?>">
+													<img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="" />
+												</a>
+											</div>
+											<a class="post-cat" href="#"><?php echo pll__('International News'); ?></a>
+											<div class="post-content">
+									 			<h2 class="post-title">
+									 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									 			</h2>
+									 			<div class="post-meta">
+									 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->
+									 				<?php $post_date = get_the_date( 'l F j, Y' ) ?>
+										 			<span class="post-date"><?php echo $post_date ?></span>
+									 			</div>
+									 			<p><?php echo wp_html_excerpt( get_the_excerpt(), 150, '...' )  ?></p>
+								 			</div><!-- Post content end -->
+										</div><!-- Post Block style 1 end -->
+										<div class="gap-20"></div>
+									</div>				
+								<?php endwhile; ?>
 							</div>
-							
-						<?php endwhile; ?>
-						
+						</div>
 					</div><!-- More news carousel end -->
 				</div><!--More news block end -->
 			
