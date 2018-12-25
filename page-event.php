@@ -24,7 +24,9 @@
 							'paged' 			=> $paged ]; 
 						?>
             			<?php $events = new WP_Query($arg) ?>
-						<?php while ( $events->have_posts() ) : $events->the_post(); ?>
+            			 <div class="block-item">
+							<div class="row">
+								<?php while ( $events->have_posts() ) : $events->the_post(); ?>
 							<div class="item">							
 								<div class="post-block-style post-float-half clearfix">
 									<div class="post-thumb">
@@ -46,16 +48,21 @@
 						 			</div><!-- Post content end -->
 								</div><!-- Post Block style 1 end -->
 
-								<div class="gap-20"></div>
+								<div class="gap-10"></div>
 
 							</div>
 							
 						<?php endwhile; ?>
+							</div>
+						</div>
+						
 						
 					</div><!-- More news carousel end -->
 				</div><!--More news block end -->
-			
-				<?php echo bootstrap_pagination($events); ?>
+				<div class="paging">
+					<?php echo bootstrap_pagination($events); ?>
+				</div>
+				
 				
 			</div><!-- Content Col end -->
 

@@ -213,6 +213,11 @@ img.banner {
    height: 20px;
 }
 
+.gap-10 {
+   clear: both;
+   height: 10px;
+}
+
 .mrb-30 {
    margin-bottom: 30px;
 }
@@ -3151,11 +3156,12 @@ li.active-cat-photo>a{
 
    .block-item .post-block-style{
       -moz-border-radius: 2px;
-       border-radius: 2px;
-       webkit-border-radius: 2px;
-       border: 1px solid #c3ccdf;
-       padding: 7px;
-       background-color: #FFF;
+      border-radius: 2px;
+      webkit-border-radius: 2px;
+      border-top: 1px solid #c3ccdf;
+      border-bottom: 1px solid #c3ccdf;
+      padding: 7px;
+      background-color: #FFF;
    }
 
    .block-item {
@@ -3163,7 +3169,6 @@ li.active-cat-photo>a{
    }
 
    .block-item .row {
-      padding-top: 9px;
       background-color: #e9ebee;
    }
 
@@ -3172,8 +3177,12 @@ li.active-cat-photo>a{
    }
 
    .post-grid {
-      margin-bottom: 9px;
+      margin-bottom: 5px;
     /* min-height: 455px; */
+   }
+
+   .post-block-style.post-float-half .post-thumb {      
+      margin-right: 0;
    }
 
    .main-nav {
@@ -3270,3 +3279,18 @@ li.active-cat-photo>a{
    line-height: 27px;
 }
 
+.pagination li span {
+    border-radius: 0 !important;
+    margin-right: 8px;
+    color: #7c7c7c;
+    border: 1px solid #ddd;
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+}
+
+.pagination>.active>span, .pagination>.active>span:hover, .pagination>li>span:hover {
+    color: #fff;
+    background: #3B5998;
+    border: 1px solid transparent;
+}

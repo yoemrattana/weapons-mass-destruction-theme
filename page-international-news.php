@@ -48,15 +48,16 @@
 									 			<p><?php echo wp_html_excerpt( get_the_excerpt(), 150, '...' )  ?></p>
 								 			</div><!-- Post content end -->
 										</div><!-- Post Block style 1 end -->
-										<div class="gap-20"></div>
+										<div class="gap-10"></div>
 									</div>				
 								<?php endwhile; ?>
 							</div>
 						</div>
 					</div><!-- More news carousel end -->
 				</div><!--More news block end -->
-			
-				<?php echo bootstrap_pagination($news); ?>
+				<div class="paging">
+					<?php echo bootstrap_pagination($news); ?>
+				</div>
 				
 			</div><!-- Content Col end -->
 

@@ -186,7 +186,8 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true ) {
 
 		foreach ( $pages as $page ) {
 			//$pagination .= '<li class="page-item"> ' . str_replace( 'page-numbers', 'page-link', $page ) . '</li>';
-			$pagination .= '<li class="page-item '.(strpos($page, 'current') !== false ? 'active' : '').'"> ' . str_replace( 'page-numbers', 'page-link', $page ) . '</li>';
+			// $pagination .= '<li class="page-item '.(strpos($page, 'current') !== false ? 'active' : '').'"> ' . str_replace( 'page-numbers', 'page-link', $page ) . '</li>';
+			$pagination .= '<li class=" '.(strpos($page, 'current') !== false ? 'active' : '').'"> ' . str_replace( 'page-numbers', '', $page ) . '</li>';
 		}
 		$pagination .= '</ul></div>';
 		if ( $echo ) {
