@@ -2362,9 +2362,9 @@ ul.navbar-nav>li.mega-dropdown {
    width: 32px;
    height: 32px;
    line-height: 32px;
-   font-size: 12px;
+   font-size: 27px;
    color: #fff;
-   background: #282828;
+   /*background: #282828;*/
    text-align: center;
    -webkit-transition: 400ms;
    -moz-transition: 400ms;
