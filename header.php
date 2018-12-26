@@ -135,7 +135,7 @@ $lang = get_bloginfo("language");
 	</header><!--/ Header end -->
 
 	<div class="main-nav clearfix">
-		<div class="container">
+		<div class="container" style="max-width: 100%; padding: 0">
 			<div class="row">
 				<nav class="navbar navbar-expand-lg col">
 					<div class="site-nav-inner float-left">

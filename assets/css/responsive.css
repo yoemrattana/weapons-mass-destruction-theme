@@ -5,6 +5,9 @@
 
 @media (min-width: 1200px) {
    /* Header */
+   #navbarSupportedContent {
+      padding-left: 30px;
+   }
    .navbar-nav li:hover .dropdown-menu {
       display: block;
    }
@@ -24,6 +27,9 @@
 
 @media (min-width: 992px) and (max-width:1199px) {
    /* Header */
+   #navbarSupportedContent{
+      padding-left: 30px;
+   }
    .navbar-nav li:hover .dropdown-menu {
       display: block;
    }
@@ -78,6 +84,9 @@
 /* Small Devices, Tablets */
 
 @media (min-width: 768px) and (max-width: 991px) {
+   .site-nav-inner.float-left {
+      padding-left: 15px;
+   }
    /* top info */
    ul.top-info li {
       padding-right: 12px;
@@ -92,7 +101,8 @@
       padding: 13px 0;
    }
    .logo img {
-      height: 40px;
+      height: 69px;
+      width: auto;
    }
    /* Navigation breakpoint */
    .navbar-toggle {
