@@ -57,6 +57,12 @@ $lang = get_bloginfo("language");
 
 <!-- <body <?php body_class(); ?>> -->
 <body>
+	<div id="loader">
+		<div class="spinner">
+			<div class="dot1"></div>
+			<div class="dot2"></div>
+		</div>
+	</div>
 <div class="body-inner">
 	<div id="top-bar" class="top-bar">
 		<div class="container">

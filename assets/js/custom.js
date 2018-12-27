@@ -285,3 +285,8 @@ jQuery(function($) {
 	    console.log(e.type);
 	  });
 	});
+
+
+	$(window).on( 'load', function() {
+        $('#loader').fadeOut();               
+    }); //Window Load End
