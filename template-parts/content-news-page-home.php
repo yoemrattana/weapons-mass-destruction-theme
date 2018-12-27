@@ -48,7 +48,6 @@
 						</div> <!-- row end -->
 					</div> <!-- block-item end-->
 				</div><!--- Latest news end -->
-				<div class="gap-10"></div>
 			</div><!-- Content Col end -->
 
 			<!-- Sidebar -->
