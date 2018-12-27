@@ -24,9 +24,9 @@ $lang = get_bloginfo("language");
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/bootstrap.min.css">
 	<!-- Template styles-->
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/style.css">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/style.css?counter=<?php echo time(); ?>  type='text/css' media='all'">
 	<!-- Responsive styles-->
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/responsive.css">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/responsive.css?counter=<?php echo time(); ?>  type='text/css' media='all'">
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/font-awesome/css/font-awesome.min.css">
 	<!-- Owl Carousel -->
