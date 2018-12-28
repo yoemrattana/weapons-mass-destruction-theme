@@ -3362,6 +3362,14 @@ li.active-cat-photo>a{
     border: 1px solid transparent;
 }
 
+.logo {
+   padding-left: 6%;
+}
+
+.navbar{
+   padding-left: 10%;
+}
+
 /*Pre Loader*/
 #loader {
     position: fixed;
