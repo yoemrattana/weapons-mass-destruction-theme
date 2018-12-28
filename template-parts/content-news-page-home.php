@@ -28,8 +28,8 @@
 									?>
 									<a class="post-cat" href="#"><?php echo pll__( $category[0]->cat_name ); ?></a>
 									<div class="post-content">
-							 			<h2 class="post-title title-small limit-excerpt">
-							 				<a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 53, '...' ); ?></a>
+							 			<h2 class="post-title title-small block-with-text">
+							 				<a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
 							 			</h2>
 							 			<div class="post-meta">
 							 				<!-- <span class="post-author"><a href="#">John Doe</a></span> -->

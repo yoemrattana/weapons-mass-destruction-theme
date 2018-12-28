@@ -57,12 +57,12 @@ $lang = get_bloginfo("language");
 
 <!-- <body <?php body_class(); ?>> -->
 <body>
-	<div id="loader">
-		<div class="spinner">
-			<div class="dot1"></div>
-			<div class="dot2"></div>
-		</div>
+<div id="loader">
+	<div class="spinner">
+		<div class="dot1"></div>
+		<div class="dot2"></div>
 	</div>
+</div>
 <div class="body-inner">
 	<div id="top-bar" class="top-bar">
 		<div class="container">
@@ -124,6 +124,9 @@ $lang = get_bloginfo("language");
 							<img src="<?php bloginfo('stylesheet_directory');?>/assets/images/logos/logo-no-title.png" width=130>
 							<div class="logo-title">
 								<h1>អាជ្ញាធរជាតិអាវុធគីមី</h1>
+								<div class="eng-title">
+									National Authority of Chemical Weapon
+								</div>
 							</div>
 						</a>
 					</div>

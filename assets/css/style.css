@@ -577,7 +577,7 @@ a[href^=tel] {
 
 .post-title.title-small {
    font-size: 19px;
-   line-height: 27px;
+   line-height: 1.5em;
    margin-top: 15px;
    margin-bottom: 5px;
    word-spacing: 2px;
@@ -1345,8 +1345,8 @@ ul.navbar-nav>li>a {
    display: inline-block;
    padding: 0 15px;
    line-height: 50px;
-   font-size: 1.4em;
-   font-weight: 700;
+   font-size: 16px;
+   font-weight: 550;
    text-transform: uppercase;
    color: #1c1c1c;
    margin: 0;
@@ -3144,7 +3144,6 @@ li.active-cat-photo>a{
       display: none;
    }
 
-
    .featured-post-area.no-padding .container{
       padding: 0;
       max-width: 100%;
@@ -3171,6 +3170,49 @@ li.active-cat-photo>a{
       padding-left: 10px;
    }
 
+}
+@media (min-width: 575px){
+   /* styles for '...' */ 
+   .block-with-text {
+     /* hide text if it more than N lines  */
+     overflow: hidden;
+     /* for set '...' in absolute position */
+     position: relative; 
+     /* use this value to count block height */
+     line-height: 1.5em;
+     /* max-height = line-height (1.2) * lines max number (3) */
+     max-height: 3em; 
+     /* fix problem when last visible word doesn't adjoin right side  */
+     /*text-align: justify;  
+      place for '...' 
+     margin-right: -1em;
+     padding-right: 1em;*/
+   }
+   /* create the ... */
+   .block-with-text:before {
+     /* points in the end */
+     content: '...';
+     /* absolute position */
+     position: absolute;
+     /* set position to right bottom corner of block */
+     right: 0;
+     bottom: 0;
+   }
+   /* hide ... if we have text, which is less than or equal to max lines */
+   .block-with-text:after {
+     /* points in the end */
+     content: '';
+     /* absolute position */
+     position: absolute;
+     /* set position to right bottom corner of text */
+     right: 0;
+     /* set width and height */
+     width: 1em;
+     height: 1em;
+     margin-top: 0.2em;
+     /* bg color = bg color under block */
+     background: white;
+   }
 }
 
 @media (max-width: 575px) {
@@ -3215,8 +3257,8 @@ li.active-cat-photo>a{
    }
 
    .post-title.title-small {
-       font-size: 24px;
-       line-height: 35px;
+       font-size: 18px;
+       line-height: 26px;
        margin-top: 15px;
        margin-bottom: 5px;
        word-spacing: 2px;
@@ -3264,11 +3306,27 @@ li.active-cat-photo>a{
       align-items: center;
    }
 
+   .header .logo a div.logo-title {
+      margin-left: 10px;
+   }
+
    .header .logo a div.logo-title h1{
-      font-family: 'Moul';
-      margin-left: 20px;
-      word-spacing: 2px;
+      display: inline;
       color: #2153a2;
+      font-family: 'Khmer OS Muol Light';
+      font-size: 37px;
+      text-shadow: 0px 2px 2px rgba(255,255,255,0.5);
+      font-weight: 400;
+   }
+
+   .header .logo a div.logo-title .eng-title{
+       font-size: 23px;
+       font-weight: bold;
+       color: #2153a2;
+       margin-top: 10px;
+       text-align: center;
+       text-shadow: 0px 2px 2px rgba(255,255,255,0.5);
+       font-family: 'Noto Serif' !important;
    }
 }
 
@@ -3375,3 +3433,4 @@ li.active-cat-photo>a{
         -webkit-transform: scale(1.0);
       }
 }
+/*Preload end*/
