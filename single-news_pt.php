@@ -11,7 +11,7 @@ get_header();
 
 setPostViews(get_the_ID());
 ?>
-
+	<div class="gap-10"></div>
 	<section class="block-wrapper no-padding">
 		<div class="container">
 			<div class="row">

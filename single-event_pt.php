@@ -9,6 +9,7 @@
 
 get_header();
 ?>
+	<div class="gap-10"></div>
 	<section class="block-wrapper no-padding">
 		<div class="container">
 			<div class="row">
