@@ -24,7 +24,7 @@ get_header();
 								<!-- <span class="post-author">
 									By <a href="#">John Doe</a>
 								</span> -->
-								<?php $post_date = get_the_date( 'l F j, Y' ) ?>
+								<?php $post_date = get_the_date( 'd-m-Y' ) ?>
 								
 								<span class="post-date"><i class="fa fa-clock-o"></i> <?php echo $post_date ?></span>
 								<!-- <span class="post-hits"><i class="fa fa-eye"></i> 21</span>
