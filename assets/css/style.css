@@ -432,6 +432,9 @@ blockquote.pull-left {
 
 .list-arrow {
    padding: 0;
+   font-size: 17px;
+   line-height: 30px;
+   font-weight: 600;
 }
 
 ul.list-arrow li:before {
@@ -3369,7 +3372,12 @@ li.active-cat-photo>a{
 .navbar{
    padding-left: 10%;
 }
-
+.one-line-excerpt{
+   white-space: nowrap; 
+   width: 326px; 
+   overflow: hidden;
+   text-overflow: ellipsis; 
+}
 /*Pre Loader*/
 #loader {
     position: fixed;

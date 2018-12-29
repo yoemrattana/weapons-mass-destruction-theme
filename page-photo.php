@@ -27,10 +27,10 @@ $photos = new WP_Query($arg);
 						<div class="card">
 							<div class="body-card">
 								<div class="cat-photo">
-									<ul class="list-round">
-									<li class="active-cat-photo"><a href="<?php echo home_url( '/photos' ) ?>" ><?php echo pll__( 'All Photos' ) ?></a></li>
+									<ul class="list-arrow">
+									<li class="active-cat-photo one-line-excerpt"><a href="<?php echo home_url( '/photos' ) ?>" ><?php echo pll__( 'All Photos' ) ?></a></li>
 									<?php while ( $photos->have_posts() ) : $photos->the_post(); ?>
-										<li><a href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 40, '...' ); ?></a></li>
+										<li class="one-line-excerpt"><a href="<?php the_permalink(); ?>"><?php the_title()//echo wp_html_excerpt( get_the_title(), 40, '...' ); ?></a></li>
 									<?php endwhile ?>
 								</ul>
 								</div>	
@@ -111,8 +111,6 @@ $photos = new WP_Query($arg);
 			
 				
 			</div><!-- Content Col end -->
-
-			
 		</div><!-- Row end -->
 	</div><!-- Container end -->
 </section><!-- 3rd block end -->
