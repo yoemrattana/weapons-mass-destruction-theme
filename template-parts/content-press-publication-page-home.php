@@ -20,7 +20,7 @@
 							<li class="clearfix">
 								<div class="post-block-style post-float clearfix">
 									<div class="post-thumb">
-										<a href="<?php the_permalink(); ?>">
+										<a href="<?php echo get_field('pdf')['url']; ?>" target="_blank">
 											<img class="img-fluid" src="<?php echo get_field( 'image' )['url'] ?>" alt="" style="width:70px"/>
 										</a>
 										<a class="post-cat" href="#"><?php echo pll__( 'Press Release' ) ?></a>
@@ -28,7 +28,7 @@
 
 									<div class="post-content press-content">
 							 			<h2 class="post-title title-small">
-							 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ) ?> </a>
+							 				<a class="post-title-widget" href="<?php echo get_field('pdf')['url']; ?>" target="_blank"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ) ?> </a>
 							 			</h2>
 							 			<div class="post-meta">
 							 				<?php $post_date = get_the_date( 'd-m-Y' ) ?>
@@ -57,7 +57,7 @@
 							<li class="clearfix">
 								<div class="post-block-style post-float clearfix">
 									<div class="post-thumb">
-										<a href="<?php the_permalink(); ?>">
+										<a href="<?php echo get_field('pdf')['url']; ?>" target="_blank">
 											<img class="img-fluid" src="<?php echo get_field( 'image' )['url'] ?>" alt=""  style="width:70px"/>
 										</a>
 										<a class="post-cat" href="#"><?php echo pll__( 'Publication' ) ?></a>
@@ -65,7 +65,7 @@
 
 									<div class="post-content press-content">
 							 			<h2 class="post-title title-small">
-							 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ) ?> </a>
+							 				<a class="post-title-widget" href="<?php echo get_field('pdf')['url']; ?>" target="_blank"><?php echo wp_html_excerpt( get_the_title(), 150, '...' ) ?> </a>
 							 			</h2>
 							 			<div class="post-meta">
 							 				<?php $post_date = get_the_date( 'd-m-Y' ) ?>

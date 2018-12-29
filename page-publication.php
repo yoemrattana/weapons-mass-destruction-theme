@@ -53,13 +53,13 @@
 							<li class="clearfix" style="list-style: none;">
 								<div class="post-block-style post-float clearfix">
 									<div class="post-thumb">
-										<a href="<?php the_permalink(); ?>">
+										<a href="<?php echo get_field('pdf')['url']; ?>" target="_blank">
 											<img class="img-fluid" src="<?php echo  get_field('image')['url']?>" alt="<?php the_title() ?>" />
 										</a>
 									</div><!-- Post thumb end -->
 									<div class="post-content">
 							 			<h2 class="post-title" style="font-size: 14px">
-							 				<a class="post-title-widget" href="<?php the_permalink(); ?>"><?php echo wp_html_excerpt( get_the_title(), 100, '...' ); ?></a>
+							 				<a class="post-title-widget" href="<?php echo get_field('pdf')['url']; ?>" target="_blank"><?php echo wp_html_excerpt( get_the_title(), 100, '...' ); ?></a>
 							 			</h2>								 			
 						 			</div><!-- Post content end -->
 								</div><!-- Post block style end -->
