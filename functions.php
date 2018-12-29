@@ -453,12 +453,12 @@ function nacw_remove_extra_data_press_release($data, $post, $context) {
         unset( $data->data['template']);
         unset( $data->data['_links']);
         $data->data['image'] = $data->data['acf']['image']['url'] ;
-
-        $regex = '/file=([^"]*)&download/';
+        $data->data['content'] = $data->data['acf']['pdf']['url'];
+        /*$regex = '/file=([^"]*)&download/';
         preg_match( $regex, $data->data['content']['rendered'], $matches );
 		$matches = array_reverse($matches);
 
-        $data->data['content'] = utf8_urldecode( $matches[0] );
+        $data->data['content'] = utf8_urldecode( $matches[0] );*/
 
         unset( $data->data['acf']);
         unset( $data->data['links']);
@@ -495,11 +495,11 @@ function nacw_remove_extra_data_publicaton($data, $post, $context) {
         unset( $data->data['template']);
         unset( $data->data['_links']);
         $data->data['image'] = $data->data['acf']['image']['url'] ;
-        $regex = '/file=([^"]*)&download/';
+        $data->data['content'] = $data->data['acf']['pdf']['url'];
+        /*$regex = '/file=([^"]*)&download/';
         preg_match( $regex, $data->data['content']['rendered'], $matches );
 		$matches = array_reverse($matches);
-
-        $data->data['content'] = utf8_urldecode( $matches[0] );
+        $data->data['content'] = utf8_urldecode( $matches[0] );*/
 
         //$data->data['content'] = $data->data['content']['rendered'] ;
         unset( $data->data['acf']);
