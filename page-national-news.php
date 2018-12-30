@@ -68,6 +68,7 @@
 			</div><!-- Content Col end -->
 
 			<div class="col-lg-4 col-sm-12">
+				<div class="gap-20"></div>
 				<?php get_template_part( 'template-parts/widget-news', 'page-national-news' ); ?>
 				<div class="gap-20"></div>
 				<?php get_template_part( 'template-parts/widget-event', 'page-national-news' ); ?>

@@ -19,7 +19,7 @@
 						<?php $arg = [
 							'post_type' 	=> 'publication',
 							'orderby' 		=> 'post_id', 
-							'posts_per_page'=>2, 
+							'posts_per_page'=>8, 
 							'order' 		=> 'DESC', 
 							'paged' 		=> $paged ]; 
 						?>
