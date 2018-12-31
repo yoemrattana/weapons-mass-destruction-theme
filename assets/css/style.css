@@ -3378,6 +3378,11 @@ li.active-cat-photo>a{
    overflow: hidden;
    text-overflow: ellipsis; 
 }
+
+#video-gallery .post-block-style .post-content .post-title.title-small{
+   font-size: 16px;
+}
+
 /*Pre Loader*/
 #loader {
     position: fixed;

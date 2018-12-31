@@ -18,7 +18,7 @@
 								<a title="Facebook" href="https://web.facebook.com/NACWCambodia/" target="_blank">
 									<span class="social-icon"><i class="fa fa-facebook-square" style="color:#1e88e5"></i></span>
 								</a>
-								<a title="Telegram" href="0889989899">
+								<a title="Telegram" href="https://t.me/NACWCambodia" target="_blank">
 									<span class="social-icon"><i class="fa fa-telegram" style="color:#1e88e5"></i></span>
 								</a>
 							</li>
@@ -82,6 +82,8 @@
 <!-- unitegallery -->
 <script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/js/unitegallery.min.js'></script>	
 <script type='text/javascript' src='<?php bloginfo('stylesheet_directory');?>/assets/unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+<!-- light gallery -->
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/assets/lightGallery/dist/js/lightgallery-all.min.js"></script>
 
 <?php wp_footer(); ?>
 </div> <!-- end inner-body-->
@@ -107,6 +109,10 @@
 		});
 
 	});
+	$(document).ready(function(){
+        $('#video-gallery').lightGallery();
+    });
+	
 	
 </script>
 
