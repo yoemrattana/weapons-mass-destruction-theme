@@ -556,67 +556,6 @@ add_filter ('rest_prepare_publication' ,'nacw_remove_extra_data_publicaton', 12,
 }
 add_filter ('rest_prepare_post' ,'nacw_remove_extra_data_publicaton1', 10, 3);*/
 
-function nacw( $request_data ) {
-	// setup query argument
-	$args = array(
-		'post_type' => 'photo',
-	);
-
-	// get posts
-	$posts = get_posts($args);
-
-	// add custom field data to posts array	
-	foreach ($posts as $key => $post) {
-			//$posts[$key]->id = $posts[$key]->ID;
-
-			unset( $posts[$key]->post_author );
-			unset( $posts[$key]->post_date_gmt );
-			unset( $posts[$key]->post_content );
-			unset( $posts[$key]->post_excerpt );
-			unset( $posts[$key]->post_status );
-			unset( $posts[$key]->comment_status );
-			unset( $posts[$key]->ping_status );
-			unset( $posts[$key]->post_password );
-			unset( $posts[$key]->to_ping );
-			unset( $posts[$key]->pinged );
-			unset( $posts[$key]->post_modified );
-			unset( $posts[$key]->post_modified_gmt );
-			unset( $posts[$key]->post_content_filtered );
-			unset( $posts[$key]->post_parent );
-			unset( $posts[$key]->guid );
-			unset( $posts[$key]->menu_order );
-			unset( $posts[$key]->post_mime_type );
-			unset( $posts[$key]->comment_count );
-			unset( $posts[$key]->filter );
-
-
-			//$posts[$key]->acf = get_fields($post->ID);
-			$images = acf_photo_gallery( 'photo_gallery', $post->ID );
-
-			$full_image_url = [];
-	        foreach ( $images as $image) {
-	        	$full_image_url[] = $image['full_image_url'];
-	        }
-
-			$posts[$key]->gallery = $full_image_url;
-			//$posts[$key]->link = get_permalink($post->ID);
-			//$posts[$key]->image = get_the_post_thumbnail_url($post->ID);
-
-			//unset( $posts[$key]->ID );
-	}
-
-	return $posts;
-}
-
-// register the endpoint
-add_action( 'rest_api_init', function () {
-	register_rest_route( 'nacw/v1', '/photo/', array(
-		'methods' => 'GET',
-		'callback' => 'nacw',
-		)
-	);
-});
-
 function nacw_remove_extra_data_pages($data, $post, $context) {
     // We only want to modify the 'view' context, for reading posts 
     if ($context!== 'view' || is_wp_error ($data)) {
@@ -697,3 +636,121 @@ function setPostViews($postID) {
  
 // Remove issues with prefetching adding extra views
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0); 
+
+/******************
+* Custom EndPoint
+*******************/
+function nacw( $request_data ) {
+	// setup query argument
+	$args = array(
+		'post_type' => 'photo',
+	);
+
+	// get posts
+	$posts = get_posts($args);
+
+	// add custom field data to posts array	
+	foreach ($posts as $key => $post) {
+			//$posts[$key]->id = $posts[$key]->ID;
+
+			unset( $posts[$key]->post_author );
+			unset( $posts[$key]->post_date_gmt );
+			unset( $posts[$key]->post_content );
+			unset( $posts[$key]->post_excerpt );
+			unset( $posts[$key]->post_status );
+			unset( $posts[$key]->comment_status );
+			unset( $posts[$key]->ping_status );
+			unset( $posts[$key]->post_password );
+			unset( $posts[$key]->to_ping );
+			unset( $posts[$key]->pinged );
+			unset( $posts[$key]->post_modified );
+			unset( $posts[$key]->post_modified_gmt );
+			unset( $posts[$key]->post_content_filtered );
+			unset( $posts[$key]->post_parent );
+			unset( $posts[$key]->guid );
+			unset( $posts[$key]->menu_order );
+			unset( $posts[$key]->post_mime_type );
+			unset( $posts[$key]->comment_count );
+			unset( $posts[$key]->filter );
+
+
+			//$posts[$key]->acf = get_fields($post->ID);
+			$images = acf_photo_gallery( 'photo_gallery', $post->ID );
+
+			$full_image_url = [];
+	        foreach ( $images as $image) {
+	        	$full_image_url[] = $image['full_image_url'];
+	        }
+
+			$posts[$key]->gallery = $full_image_url;
+			//$posts[$key]->link = get_permalink($post->ID);
+			//$posts[$key]->image = get_the_post_thumbnail_url($post->ID);
+
+			//unset( $posts[$key]->ID );
+	}
+
+	return $posts;
+}
+
+// register the endpoint
+add_action( 'rest_api_init', function () {
+	register_rest_route( 'nacw/v1', '/photo/', array(
+		'methods' => 'GET',
+		'callback' => 'nacw',
+		)
+	);
+});
+
+/* get popular post */
+function get_popular_post() {
+	$posts = get_posts( array( 
+		'posts_per_page' => 8,
+		'meta_key' => 'post_views_count',
+		'orderby' => 'meta_value_num',
+		'order' => 'DESC',
+		'post_type' => 'news_pt',  
+	) );
+
+	foreach ($posts as $key => $post) {
+		unset( $posts[$key]->post_author );
+		unset( $posts[$key]->post_date_gmt );
+		unset( $posts[$key]->post_content );
+		unset( $posts[$key]->post_excerpt );
+		unset( $posts[$key]->post_status );
+		unset( $posts[$key]->comment_status );
+		unset( $posts[$key]->ping_status );
+		unset( $posts[$key]->post_password );
+		unset( $posts[$key]->to_ping );
+		unset( $posts[$key]->pinged );
+		unset( $posts[$key]->post_modified );
+		unset( $posts[$key]->post_modified_gmt );
+		unset( $posts[$key]->post_content_filtered );
+		unset( $posts[$key]->post_parent );
+		unset( $posts[$key]->guid );
+		unset( $posts[$key]->menu_order );
+		unset( $posts[$key]->post_mime_type );
+		unset( $posts[$key]->comment_count );
+		unset( $posts[$key]->filter );
+		unset( $posts[$key]->post_name );
+		unset( $posts[$key]->post_type );
+		//
+		$posts[$key]->category = get_the_category( $post->ID )[0]->cat_name;
+		$posts[$key]->acf = get_fields( $post->ID );
+		$posts[$key]->image = $posts[$key]->acf['image']['url'] ;
+		$posts[$key]->content = wp_strip_all_tags(preg_replace( '/<img[^>]+./','', $posts[$key]->acf['description'] ) );
+		$regex = '/src="([^"]*)"/';
+        preg_match_all( $regex, $posts[$key]->acf['description'], $matches );
+        $matches = array_reverse($matches);
+        $posts[$key]->image_gallery = ! empty($matches[0]) ? $matches[0] : null;
+        unset( $posts[$key]->acf );
+	}
+	return $posts;
+}
+
+add_action( 'rest_api_init', function () {
+	register_rest_route( 'get_popular_post/v1', '/popular_posts/', array(
+		'methods' => 'GET',
+		'callback' => 'get_popular_post',
+		)
+	);
+});
