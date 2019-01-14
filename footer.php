@@ -25,8 +25,8 @@
 						</ul>
 						<div class="footer-contact">
 							<p class="title-contact">ទំនាក់ទំនង</p>
-							<p>gmail@gmail.com</p>
-							<p>0998765467</p>
+							<p>pengby.ngor@gmail.com</p>
+							<p>0889989899</p>
 						</div>
 					</div><!-- Footer info content end -->
 				</div><!-- Col end -->
