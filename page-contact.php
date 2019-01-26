@@ -44,8 +44,8 @@
 				<div class="gap-20"></div>
 
 				<div class="card">
-					<div class="card-body">
-						<div class="container-fluid">
+					<div class="card-body" style="padding: 0">
+						<div class="container-fluid" style="padding: 0">
 						    <div class="map-responsive">
 							   <?php echo $map ?>
 							</div>
