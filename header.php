@@ -126,7 +126,7 @@ $lang = get_bloginfo("language");
 							<div class="logo-title">
 								<h1>អាជ្ញាធរជាតិអាវុធគីមី</h1>
 								<div class="eng-title">
-									National Authority of Chemical Weapon
+									National Authority of Chemical Weapons
 								</div>
 							</div>
 						</a>

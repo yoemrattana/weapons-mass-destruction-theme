@@ -23,11 +23,11 @@
 								</a>
 							</li>
 						</ul>
-						<!-- <div class="footer-contact">
+						<div class="footer-contact">
 							<p class="title-contact">ទំនាក់ទំនង</p>
-							<p>pengby.ngor@gmail.com</p>
-							<p>0889989899</p>
-						</div> -->
+							<p>secretariat@nacw.gov.kh</p>
+							<!-- <p>0889989899</p> -->
+						</div>
 					</div><!-- Footer info content end -->
 				</div><!-- Col end -->
 			</div><!-- Row end -->
