@@ -582,7 +582,7 @@ function nacw_remove_extra_data_pages($data, $post, $context) {
         $data->data['content'] = wp_strip_all_tags( $data->data['content']['rendered'] );
         
         unset( $data->data['link']);
-        if ( $data->data['slug'] === 'contacts' || $data->data['slug'] === 'contacts-en' ) {
+        if ( $data->data['slug'] === 'contact' || $data->data['slug'] === 'contact-en' ) {
         	
         	$data->data['phone'] = $data->data['acf']['phone'];
         	$data->data['email'] = $data->data['acf']['email'];
