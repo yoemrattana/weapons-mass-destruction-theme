@@ -41,7 +41,7 @@
 		<div class="row">
 			<div class="col-sm-12 col-md-6">
 				<div class="copyright-info">
-					<span>Copyright © 2018</span>
+					<span>Copyright © <?php echo date("Y") ?></span>
 				</div>
 			</div>
 		</div><!-- Row end -->
