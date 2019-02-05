@@ -2,7 +2,6 @@
 /*
     Template Name: Home Page
  * */
-define( "DONOTCACHEPAGE", true ); 
 get_header(); 
 ?>
 <!-- slideshow -->
